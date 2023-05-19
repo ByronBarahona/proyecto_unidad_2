@@ -1,0 +1,31 @@
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\Proyecto_Net_2.exe.config
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\Proyecto_Net_2.exe
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\Proyecto_Net_2.pdb
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.AssemblyReference.cache
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.Login.resources
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.Properties.Resources.resources
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.GenerateResource.cache
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.CoreCompileInputs.cache
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.exe
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.pdb
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\EntityFramework.dll
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\EntityFramework.xml
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Adm_Marcas.resources
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Principal.resources
+C:\Users\barah\Desktop\Proyecto_2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.CopyComplete
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.AssemblyReference.cache
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.SuggestedBindingRedirects.cache
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Adm_Marcas.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Adm_Stock.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Pop_up_Ingreso_VHS.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Principal.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Ventas.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.Login.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.Properties.Resources.resources
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.GenerateResource.cache
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.CoreCompileInputs.cache
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.exe
+C:\Users\barah\Desktop\Proyecto 2\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.pdb
