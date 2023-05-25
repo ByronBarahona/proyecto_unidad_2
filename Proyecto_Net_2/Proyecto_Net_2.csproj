@@ -56,6 +56,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAR_MANAGERDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Adm_Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +112,48 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Comunas.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion_BD.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion_BD.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion_BD.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion_BD.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion_BD.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Model\MARCAS_vhs.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\region.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\STOCK.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TIPO_USR.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\TIP_PAG.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\tip_vhs.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\USUARIO.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\VENTAS_VHS.cs">
+      <DependentUpon>Conexion_BD.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\Adm_Marcas.resx">
@@ -122,6 +184,57 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="Model\Conexion_BD.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Conexion_BD.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="CAR_MANAGERDataSet.xsc">
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet.xss">
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xsc">
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xss">
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xsc">
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xss">
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xsc">
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xss">
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Model\Conexion_BD.edmx.diagram">
+      <DependentUpon>Conexion_BD.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -136,14 +249,24 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Imagenes\Logotipo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Model\Conexion_BD.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Conexion_BD.edmx</DependentUpon>
+      <LastGenOutput>Conexion_BD.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model\Conexion_BD.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Conexion_BD.edmx</DependentUpon>
+      <LastGenOutput>Conexion_BD.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

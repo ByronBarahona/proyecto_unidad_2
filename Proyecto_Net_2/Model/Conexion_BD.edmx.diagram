@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="75b5b0f546fd43b2ad64a4a17bf027be" Name="Diagram1" ZoomLevel="84">
+        <EntityTypeShape EntityType="CAR_MANAGERModel.Comunas" Width="1.5" PointX="3" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.MARCAS_vhs" Width="1.5" PointX="5.75" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.region" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.STOCK" Width="1.5" PointX="8" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.TIP_PAG" Width="1.5" PointX="8" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.tip_vhs" Width="1.5" PointX="3.625" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.TIPO_USR" Width="1.5" PointX="3" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.VENTAS_VHS" Width="1.5" PointX="10.25" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="CAR_MANAGERModel.USUARIO" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__Comunas__codi_re__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__USUARIO__Comuna__45F365D3" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__STOCK__id_marca__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__USUARIO__Region__46E78A0C" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__STOCK__tipo_vhs__2E1BDC42" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__VENTAS_VHS__VHS__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__VENTAS_VH__forma__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CAR_MANAGERModel.FK__USUARIO__Tipo_us__47DBAE45" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

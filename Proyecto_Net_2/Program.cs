@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_Net_2.GUI;
+using System;
 using System.Windows.Forms;
 
 namespace Proyecto_Net_2
@@ -13,7 +14,7 @@ namespace Proyecto_Net_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login());
+            Application.Run(new Adm_Marcas());
         }
     }
 }
