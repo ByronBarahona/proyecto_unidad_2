@@ -36,34 +36,37 @@
             // 
             // Btn_Adm_Marca
             // 
-            this.Btn_Adm_Marca.Location = new System.Drawing.Point(130, 28);
+            this.Btn_Adm_Marca.Location = new System.Drawing.Point(39, 55);
             this.Btn_Adm_Marca.Name = "Btn_Adm_Marca";
             this.Btn_Adm_Marca.Size = new System.Drawing.Size(125, 23);
             this.Btn_Adm_Marca.TabIndex = 0;
             this.Btn_Adm_Marca.Text = "Administración Marcas";
             this.Btn_Adm_Marca.UseVisualStyleBackColor = true;
+            this.Btn_Adm_Marca.Click += new System.EventHandler(this.Btn_Adm_Marca_Click);
             // 
             // Adm_Stock
             // 
-            this.Adm_Stock.Location = new System.Drawing.Point(134, 81);
+            this.Adm_Stock.Location = new System.Drawing.Point(238, 55);
             this.Adm_Stock.Name = "Adm_Stock";
             this.Adm_Stock.Size = new System.Drawing.Size(121, 23);
             this.Adm_Stock.TabIndex = 1;
             this.Adm_Stock.Text = "Mantenimiento Stock";
             this.Adm_Stock.UseVisualStyleBackColor = true;
+            this.Adm_Stock.Click += new System.EventHandler(this.Adm_Stock_Click);
             // 
             // Btn_Ventas
             // 
-            this.Btn_Ventas.Location = new System.Drawing.Point(159, 132);
+            this.Btn_Ventas.Location = new System.Drawing.Point(39, 176);
             this.Btn_Ventas.Name = "Btn_Ventas";
             this.Btn_Ventas.Size = new System.Drawing.Size(75, 23);
             this.Btn_Ventas.TabIndex = 2;
             this.Btn_Ventas.Text = "Ventas";
             this.Btn_Ventas.UseVisualStyleBackColor = true;
+            this.Btn_Ventas.Click += new System.EventHandler(this.Btn_Ventas_Click);
             // 
             // Btn_Reportes
             // 
-            this.Btn_Reportes.Location = new System.Drawing.Point(159, 185);
+            this.Btn_Reportes.Location = new System.Drawing.Point(238, 176);
             this.Btn_Reportes.Name = "Btn_Reportes";
             this.Btn_Reportes.Size = new System.Drawing.Size(75, 23);
             this.Btn_Reportes.TabIndex = 3;
@@ -74,7 +77,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 450);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(411, 276);
             this.Controls.Add(this.Btn_Reportes);
             this.Controls.Add(this.Btn_Ventas);
             this.Controls.Add(this.Adm_Stock);

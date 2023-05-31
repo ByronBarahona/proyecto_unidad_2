@@ -16,5 +16,12 @@ namespace Proyecto_Net_2.GUI
         {
             InitializeComponent();
         }
+
+        private void Adm_Stock_Load(object sender, EventArgs e)
+        {
+            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet5.MARCAS_vhs' Puede moverla o quitarla según sea necesario.
+            this.mARCAS_vhsTableAdapter.Fill(this.cAR_MANAGERDataSet5.MARCAS_vhs);
+
+        }
     }
 }

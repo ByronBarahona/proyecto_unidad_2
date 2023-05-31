@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.Lbl_Stock = new System.Windows.Forms.Label();
             this.Gboc_Filtros = new System.Windows.Forms.GroupBox();
+            this.Cbox_Tip_Veh = new System.Windows.Forms.ComboBox();
+            this.Lbl_Clase_Veh = new System.Windows.Forms.Label();
             this.Txt_Rso_Soc = new System.Windows.Forms.TextBox();
             this.Lbl_Rso_Soc = new System.Windows.Forms.Label();
             this.Txt_Dig_Ver = new System.Windows.Forms.TextBox();
@@ -38,18 +41,27 @@
             this.Lbl_ident_Marca = new System.Windows.Forms.Label();
             this.Gbox_Data = new System.Windows.Forms.GroupBox();
             this.DtGridView_Stock = new System.Windows.Forms.DataGridView();
-            this.Lbl_Clase_Veh = new System.Windows.Forms.Label();
-            this.Cbox_Tip_Veh = new System.Windows.Forms.ComboBox();
             this.Gbox_Botonera = new System.Windows.Forms.GroupBox();
-            this.Btn_Nuevo = new System.Windows.Forms.Button();
-            this.Btn_Modificar = new System.Windows.Forms.Button();
-            this.Btn_Limpiar = new System.Windows.Forms.Button();
-            this.Btn_Volver = new System.Windows.Forms.Button();
             this.Btn_Buscar = new System.Windows.Forms.Button();
+            this.Btn_Volver = new System.Windows.Forms.Button();
+            this.Btn_Limpiar = new System.Windows.Forms.Button();
+            this.Btn_Modificar = new System.Windows.Forms.Button();
+            this.Btn_Nuevo = new System.Windows.Forms.Button();
+            this.cAR_MANAGERDataSet5 = new Proyecto_Net_2.CAR_MANAGERDataSet5();
+            this.mARCASvhsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.mARCAS_vhsTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSet5TableAdapters.MARCAS_vhsTableAdapter();
+            this.idMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rUTMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dvmarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gboc_Filtros.SuspendLayout();
             this.Gbox_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).BeginInit();
             this.Gbox_Botonera.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_Stock
@@ -78,6 +90,23 @@
             this.Gboc_Filtros.Size = new System.Drawing.Size(756, 107);
             this.Gboc_Filtros.TabIndex = 2;
             this.Gboc_Filtros.TabStop = false;
+            // 
+            // Cbox_Tip_Veh
+            // 
+            this.Cbox_Tip_Veh.FormattingEnabled = true;
+            this.Cbox_Tip_Veh.Location = new System.Drawing.Point(352, 31);
+            this.Cbox_Tip_Veh.Name = "Cbox_Tip_Veh";
+            this.Cbox_Tip_Veh.Size = new System.Drawing.Size(138, 21);
+            this.Cbox_Tip_Veh.TabIndex = 7;
+            // 
+            // Lbl_Clase_Veh
+            // 
+            this.Lbl_Clase_Veh.AutoSize = true;
+            this.Lbl_Clase_Veh.Location = new System.Drawing.Point(269, 38);
+            this.Lbl_Clase_Veh.Name = "Lbl_Clase_Veh";
+            this.Lbl_Clase_Veh.Size = new System.Drawing.Size(77, 13);
+            this.Lbl_Clase_Veh.TabIndex = 6;
+            this.Lbl_Clase_Veh.Text = "Clase Vehiculo";
             // 
             // Txt_Rso_Soc
             // 
@@ -139,29 +168,21 @@
             // 
             // DtGridView_Stock
             // 
+            this.DtGridView_Stock.AutoGenerateColumns = false;
             this.DtGridView_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DtGridView_Stock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idMARCADataGridViewTextBoxColumn,
+            this.nombreMARCADataGridViewTextBoxColumn,
+            this.rUTMARCADataGridViewTextBoxColumn,
+            this.dvmarcaDataGridViewTextBoxColumn,
+            this.telefonoDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.DtGridView_Stock.DataSource = this.mARCASvhsBindingSource;
             this.DtGridView_Stock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DtGridView_Stock.Location = new System.Drawing.Point(3, 16);
             this.DtGridView_Stock.Name = "DtGridView_Stock";
             this.DtGridView_Stock.Size = new System.Drawing.Size(749, 156);
             this.DtGridView_Stock.TabIndex = 0;
-            // 
-            // Lbl_Clase_Veh
-            // 
-            this.Lbl_Clase_Veh.AutoSize = true;
-            this.Lbl_Clase_Veh.Location = new System.Drawing.Point(269, 38);
-            this.Lbl_Clase_Veh.Name = "Lbl_Clase_Veh";
-            this.Lbl_Clase_Veh.Size = new System.Drawing.Size(77, 13);
-            this.Lbl_Clase_Veh.TabIndex = 6;
-            this.Lbl_Clase_Veh.Text = "Clase Vehiculo";
-            // 
-            // Cbox_Tip_Veh
-            // 
-            this.Cbox_Tip_Veh.FormattingEnabled = true;
-            this.Cbox_Tip_Veh.Location = new System.Drawing.Point(352, 31);
-            this.Cbox_Tip_Veh.Name = "Cbox_Tip_Veh";
-            this.Cbox_Tip_Veh.Size = new System.Drawing.Size(138, 21);
-            this.Cbox_Tip_Veh.TabIndex = 7;
             // 
             // Gbox_Botonera
             // 
@@ -177,32 +198,14 @@
             this.Gbox_Botonera.TabIndex = 4;
             this.Gbox_Botonera.TabStop = false;
             // 
-            // Btn_Nuevo
+            // Btn_Buscar
             // 
-            this.Btn_Nuevo.Location = new System.Drawing.Point(421, 19);
-            this.Btn_Nuevo.Name = "Btn_Nuevo";
-            this.Btn_Nuevo.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Nuevo.TabIndex = 0;
-            this.Btn_Nuevo.Text = "Nuevo";
-            this.Btn_Nuevo.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Modificar
-            // 
-            this.Btn_Modificar.Location = new System.Drawing.Point(502, 18);
-            this.Btn_Modificar.Name = "Btn_Modificar";
-            this.Btn_Modificar.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Modificar.TabIndex = 1;
-            this.Btn_Modificar.Text = "Modificar";
-            this.Btn_Modificar.UseVisualStyleBackColor = true;
-            // 
-            // Btn_Limpiar
-            // 
-            this.Btn_Limpiar.Location = new System.Drawing.Point(583, 18);
-            this.Btn_Limpiar.Name = "Btn_Limpiar";
-            this.Btn_Limpiar.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Limpiar.TabIndex = 2;
-            this.Btn_Limpiar.Text = "Limpiar";
-            this.Btn_Limpiar.UseVisualStyleBackColor = true;
+            this.Btn_Buscar.Location = new System.Drawing.Point(340, 20);
+            this.Btn_Buscar.Name = "Btn_Buscar";
+            this.Btn_Buscar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Buscar.TabIndex = 4;
+            this.Btn_Buscar.Text = "Buscar";
+            this.Btn_Buscar.UseVisualStyleBackColor = true;
             // 
             // Btn_Volver
             // 
@@ -213,14 +216,83 @@
             this.Btn_Volver.Text = "Volver";
             this.Btn_Volver.UseVisualStyleBackColor = true;
             // 
-            // Btn_Buscar
+            // Btn_Limpiar
             // 
-            this.Btn_Buscar.Location = new System.Drawing.Point(340, 20);
-            this.Btn_Buscar.Name = "Btn_Buscar";
-            this.Btn_Buscar.Size = new System.Drawing.Size(75, 23);
-            this.Btn_Buscar.TabIndex = 4;
-            this.Btn_Buscar.Text = "Buscar";
-            this.Btn_Buscar.UseVisualStyleBackColor = true;
+            this.Btn_Limpiar.Location = new System.Drawing.Point(583, 18);
+            this.Btn_Limpiar.Name = "Btn_Limpiar";
+            this.Btn_Limpiar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Limpiar.TabIndex = 2;
+            this.Btn_Limpiar.Text = "Limpiar";
+            this.Btn_Limpiar.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Modificar
+            // 
+            this.Btn_Modificar.Location = new System.Drawing.Point(502, 18);
+            this.Btn_Modificar.Name = "Btn_Modificar";
+            this.Btn_Modificar.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Modificar.TabIndex = 1;
+            this.Btn_Modificar.Text = "Modificar";
+            this.Btn_Modificar.UseVisualStyleBackColor = true;
+            // 
+            // Btn_Nuevo
+            // 
+            this.Btn_Nuevo.Location = new System.Drawing.Point(421, 19);
+            this.Btn_Nuevo.Name = "Btn_Nuevo";
+            this.Btn_Nuevo.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Nuevo.TabIndex = 0;
+            this.Btn_Nuevo.Text = "Nuevo";
+            this.Btn_Nuevo.UseVisualStyleBackColor = true;
+            // 
+            // cAR_MANAGERDataSet5
+            // 
+            this.cAR_MANAGERDataSet5.DataSetName = "CAR_MANAGERDataSet5";
+            this.cAR_MANAGERDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mARCASvhsBindingSource
+            // 
+            this.mARCASvhsBindingSource.DataMember = "MARCAS_vhs";
+            this.mARCASvhsBindingSource.DataSource = this.cAR_MANAGERDataSet5;
+            // 
+            // mARCAS_vhsTableAdapter
+            // 
+            this.mARCAS_vhsTableAdapter.ClearBeforeFill = true;
+            // 
+            // idMARCADataGridViewTextBoxColumn
+            // 
+            this.idMARCADataGridViewTextBoxColumn.DataPropertyName = "id_MARCA";
+            this.idMARCADataGridViewTextBoxColumn.HeaderText = "Codigo Marca";
+            this.idMARCADataGridViewTextBoxColumn.Name = "idMARCADataGridViewTextBoxColumn";
+            this.idMARCADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nombreMARCADataGridViewTextBoxColumn
+            // 
+            this.nombreMARCADataGridViewTextBoxColumn.DataPropertyName = "Nombre_MARCA";
+            this.nombreMARCADataGridViewTextBoxColumn.HeaderText = "Razón Social";
+            this.nombreMARCADataGridViewTextBoxColumn.Name = "nombreMARCADataGridViewTextBoxColumn";
+            // 
+            // rUTMARCADataGridViewTextBoxColumn
+            // 
+            this.rUTMARCADataGridViewTextBoxColumn.DataPropertyName = "RUT_MARCA";
+            this.rUTMARCADataGridViewTextBoxColumn.HeaderText = "Rut Marca";
+            this.rUTMARCADataGridViewTextBoxColumn.Name = "rUTMARCADataGridViewTextBoxColumn";
+            // 
+            // dvmarcaDataGridViewTextBoxColumn
+            // 
+            this.dvmarcaDataGridViewTextBoxColumn.DataPropertyName = "Dv_marca";
+            this.dvmarcaDataGridViewTextBoxColumn.HeaderText = "Digito Verificador";
+            this.dvmarcaDataGridViewTextBoxColumn.Name = "dvmarcaDataGridViewTextBoxColumn";
+            // 
+            // telefonoDataGridViewTextBoxColumn
+            // 
+            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
+            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
+            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
             // Adm_Stock
             // 
@@ -233,11 +305,14 @@
             this.Controls.Add(this.Lbl_Stock);
             this.Name = "Adm_Stock";
             this.Text = "Adm_Stock";
+            this.Load += new System.EventHandler(this.Adm_Stock_Load);
             this.Gboc_Filtros.ResumeLayout(false);
             this.Gboc_Filtros.PerformLayout();
             this.Gbox_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).EndInit();
             this.Gbox_Botonera.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -263,5 +338,14 @@
         private System.Windows.Forms.Button Btn_Limpiar;
         private System.Windows.Forms.Button Btn_Modificar;
         private System.Windows.Forms.Button Btn_Nuevo;
+        private CAR_MANAGERDataSet5 cAR_MANAGERDataSet5;
+        private System.Windows.Forms.BindingSource mARCASvhsBindingSource;
+        private CAR_MANAGERDataSet5TableAdapters.MARCAS_vhsTableAdapter mARCAS_vhsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idMARCADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreMARCADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rUTMARCADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dvmarcaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
     }
 }

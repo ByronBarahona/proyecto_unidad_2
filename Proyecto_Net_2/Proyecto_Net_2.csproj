@@ -76,6 +76,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CAR_MANAGERDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet5.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Adm_Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +97,18 @@
     </Compile>
     <Compile Include="GUI\Adm_Stock.Designer.cs">
       <DependentUpon>Adm_Stock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pago_Credito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Pago_Credito.Designer.cs">
+      <DependentUpon>Pago_Credito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pago_Directo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Pago_Directo.Designer.cs">
+      <DependentUpon>Pago_Directo.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Pop_up_Ingreso_VHS.cs">
       <SubType>Form</SubType>
@@ -162,6 +184,12 @@
     <EmbeddedResource Include="GUI\Adm_Stock.resx">
       <DependentUpon>Adm_Stock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pago_Credito.resx">
+      <DependentUpon>Pago_Credito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Pago_Directo.resx">
+      <DependentUpon>Pago_Directo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Pop_up_Ingreso_VHS.resx">
       <DependentUpon>Pop_up_Ingreso_VHS.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +259,28 @@
     </None>
     <None Include="CAR_MANAGERDataSet3.xss">
       <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet4.xsc">
+      <DependentUpon>CAR_MANAGERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet4.xss">
+      <DependentUpon>CAR_MANAGERDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet5.xsc">
+      <DependentUpon>CAR_MANAGERDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet5.xss">
+      <DependentUpon>CAR_MANAGERDataSet5.xsd</DependentUpon>
     </None>
     <None Include="Model\Conexion_BD.edmx.diagram">
       <DependentUpon>Conexion_BD.edmx</DependentUpon>

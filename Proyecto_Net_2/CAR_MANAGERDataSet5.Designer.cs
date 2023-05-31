@@ -20,17 +20,17 @@ namespace Proyecto_Net_2 {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CAR_MANAGERDataSet1")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CAR_MANAGERDataSet5")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CAR_MANAGERDataSet1 : global::System.Data.DataSet {
+    public partial class CAR_MANAGERDataSet5 : global::System.Data.DataSet {
         
-        private ComunasDataTable tableComunas;
+        private MARCAS_vhsDataTable tableMARCAS_vhs;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public CAR_MANAGERDataSet1() {
+        public CAR_MANAGERDataSet5() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Proyecto_Net_2 {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected CAR_MANAGERDataSet1(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CAR_MANAGERDataSet5(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Proyecto_Net_2 {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Comunas"] != null)) {
-                    base.Tables.Add(new ComunasDataTable(ds.Tables["Comunas"]));
+                if ((ds.Tables["MARCAS_vhs"] != null)) {
+                    base.Tables.Add(new MARCAS_vhsDataTable(ds.Tables["MARCAS_vhs"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Proyecto_Net_2 {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public ComunasDataTable Comunas {
+        public MARCAS_vhsDataTable MARCAS_vhs {
             get {
-                return this.tableComunas;
+                return this.tableMARCAS_vhs;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Proyecto_Net_2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CAR_MANAGERDataSet1 cln = ((CAR_MANAGERDataSet1)(base.Clone()));
+            CAR_MANAGERDataSet5 cln = ((CAR_MANAGERDataSet5)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Proyecto_Net_2 {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Comunas"] != null)) {
-                    base.Tables.Add(new ComunasDataTable(ds.Tables["Comunas"]));
+                if ((ds.Tables["MARCAS_vhs"] != null)) {
+                    base.Tables.Add(new MARCAS_vhsDataTable(ds.Tables["MARCAS_vhs"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Proyecto_Net_2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableComunas = ((ComunasDataTable)(base.Tables["Comunas"]));
+            this.tableMARCAS_vhs = ((MARCAS_vhsDataTable)(base.Tables["MARCAS_vhs"]));
             if ((initTable == true)) {
-                if ((this.tableComunas != null)) {
-                    this.tableComunas.InitVars();
+                if ((this.tableMARCAS_vhs != null)) {
+                    this.tableMARCAS_vhs.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Proyecto_Net_2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CAR_MANAGERDataSet1";
+            this.DataSetName = "CAR_MANAGERDataSet5";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CAR_MANAGERDataSet1.xsd";
+            this.Namespace = "http://tempuri.org/CAR_MANAGERDataSet5.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableComunas = new ComunasDataTable();
-            base.Tables.Add(this.tableComunas);
+            this.tableMARCAS_vhs = new MARCAS_vhsDataTable();
+            base.Tables.Add(this.tableMARCAS_vhs);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeComunas() {
+        private bool ShouldSerializeMARCAS_vhs() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Proyecto_Net_2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CAR_MANAGERDataSet1 ds = new CAR_MANAGERDataSet1();
+            CAR_MANAGERDataSet5 ds = new CAR_MANAGERDataSet5();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,27 +270,31 @@ namespace Proyecto_Net_2 {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void ComunasRowChangeEventHandler(object sender, ComunasRowChangeEvent e);
+        public delegate void MARCAS_vhsRowChangeEventHandler(object sender, MARCAS_vhsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class ComunasDataTable : global::System.Data.TypedTableBase<ComunasRow> {
+        public partial class MARCAS_vhsDataTable : global::System.Data.TypedTableBase<MARCAS_vhsRow> {
             
-            private global::System.Data.DataColumn columnid_Comuna;
+            private global::System.Data.DataColumn columnid_MARCA;
             
-            private global::System.Data.DataColumn columnNmbre_comuna;
+            private global::System.Data.DataColumn columnNombre_MARCA;
             
-            private global::System.Data.DataColumn columncod_comuna;
+            private global::System.Data.DataColumn columnRUT_MARCA;
             
-            private global::System.Data.DataColumn columncodi_region;
+            private global::System.Data.DataColumn columnDv_marca;
+            
+            private global::System.Data.DataColumn columntelefono;
+            
+            private global::System.Data.DataColumn columnemail;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasDataTable() {
-                this.TableName = "Comunas";
+            public MARCAS_vhsDataTable() {
+                this.TableName = "MARCAS_vhs";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -298,7 +302,7 @@ namespace Proyecto_Net_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ComunasDataTable(global::System.Data.DataTable table) {
+            internal MARCAS_vhsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -315,40 +319,56 @@ namespace Proyecto_Net_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected ComunasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected MARCAS_vhsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn id_ComunaColumn {
+            public global::System.Data.DataColumn id_MARCAColumn {
                 get {
-                    return this.columnid_Comuna;
+                    return this.columnid_MARCA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn Nmbre_comunaColumn {
+            public global::System.Data.DataColumn Nombre_MARCAColumn {
                 get {
-                    return this.columnNmbre_comuna;
+                    return this.columnNombre_MARCA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn cod_comunaColumn {
+            public global::System.Data.DataColumn RUT_MARCAColumn {
                 get {
-                    return this.columncod_comuna;
+                    return this.columnRUT_MARCA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn codi_regionColumn {
+            public global::System.Data.DataColumn Dv_marcaColumn {
                 get {
-                    return this.columncodi_region;
+                    return this.columnDv_marca;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn telefonoColumn {
+                get {
+                    return this.columntelefono;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn emailColumn {
+                get {
+                    return this.columnemail;
                 }
             }
             
@@ -363,55 +383,57 @@ namespace Proyecto_Net_2 {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRow this[int index] {
+            public MARCAS_vhsRow this[int index] {
                 get {
-                    return ((ComunasRow)(this.Rows[index]));
+                    return ((MARCAS_vhsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ComunasRowChangeEventHandler ComunasRowChanging;
+            public event MARCAS_vhsRowChangeEventHandler MARCAS_vhsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ComunasRowChangeEventHandler ComunasRowChanged;
+            public event MARCAS_vhsRowChangeEventHandler MARCAS_vhsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ComunasRowChangeEventHandler ComunasRowDeleting;
+            public event MARCAS_vhsRowChangeEventHandler MARCAS_vhsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event ComunasRowChangeEventHandler ComunasRowDeleted;
+            public event MARCAS_vhsRowChangeEventHandler MARCAS_vhsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddComunasRow(ComunasRow row) {
+            public void AddMARCAS_vhsRow(MARCAS_vhsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRow AddComunasRow(string Nmbre_comuna, int cod_comuna, int codi_region) {
-                ComunasRow rowComunasRow = ((ComunasRow)(this.NewRow()));
+            public MARCAS_vhsRow AddMARCAS_vhsRow(string Nombre_MARCA, int RUT_MARCA, int Dv_marca, int telefono, string email) {
+                MARCAS_vhsRow rowMARCAS_vhsRow = ((MARCAS_vhsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Nmbre_comuna,
-                        cod_comuna,
-                        codi_region};
-                rowComunasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowComunasRow);
-                return rowComunasRow;
+                        Nombre_MARCA,
+                        RUT_MARCA,
+                        Dv_marca,
+                        telefono,
+                        email};
+                rowMARCAS_vhsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowMARCAS_vhsRow);
+                return rowMARCAS_vhsRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRow FindByid_Comuna(int id_Comuna) {
-                return ((ComunasRow)(this.Rows.Find(new object[] {
-                            id_Comuna})));
+            public MARCAS_vhsRow FindByid_MARCA(int id_MARCA) {
+                return ((MARCAS_vhsRow)(this.Rows.Find(new object[] {
+                            id_MARCA})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                ComunasDataTable cln = ((ComunasDataTable)(base.Clone()));
+                MARCAS_vhsDataTable cln = ((MARCAS_vhsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -419,67 +441,75 @@ namespace Proyecto_Net_2 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new ComunasDataTable();
+                return new MARCAS_vhsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnid_Comuna = base.Columns["id_Comuna"];
-                this.columnNmbre_comuna = base.Columns["Nmbre_comuna"];
-                this.columncod_comuna = base.Columns["cod_comuna"];
-                this.columncodi_region = base.Columns["codi_region"];
+                this.columnid_MARCA = base.Columns["id_MARCA"];
+                this.columnNombre_MARCA = base.Columns["Nombre_MARCA"];
+                this.columnRUT_MARCA = base.Columns["RUT_MARCA"];
+                this.columnDv_marca = base.Columns["Dv_marca"];
+                this.columntelefono = base.Columns["telefono"];
+                this.columnemail = base.Columns["email"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnid_Comuna = new global::System.Data.DataColumn("id_Comuna", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_Comuna);
-                this.columnNmbre_comuna = new global::System.Data.DataColumn("Nmbre_comuna", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNmbre_comuna);
-                this.columncod_comuna = new global::System.Data.DataColumn("cod_comuna", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncod_comuna);
-                this.columncodi_region = new global::System.Data.DataColumn("codi_region", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncodi_region);
+                this.columnid_MARCA = new global::System.Data.DataColumn("id_MARCA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_MARCA);
+                this.columnNombre_MARCA = new global::System.Data.DataColumn("Nombre_MARCA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombre_MARCA);
+                this.columnRUT_MARCA = new global::System.Data.DataColumn("RUT_MARCA", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRUT_MARCA);
+                this.columnDv_marca = new global::System.Data.DataColumn("Dv_marca", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDv_marca);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono);
+                this.columnemail = new global::System.Data.DataColumn("email", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnemail);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnid_Comuna}, true));
-                this.columnid_Comuna.AutoIncrement = true;
-                this.columnid_Comuna.AutoIncrementSeed = -1;
-                this.columnid_Comuna.AutoIncrementStep = -1;
-                this.columnid_Comuna.AllowDBNull = false;
-                this.columnid_Comuna.ReadOnly = true;
-                this.columnid_Comuna.Unique = true;
-                this.columnNmbre_comuna.AllowDBNull = false;
-                this.columnNmbre_comuna.MaxLength = 60;
-                this.columncod_comuna.AllowDBNull = false;
-                this.columncodi_region.AllowDBNull = false;
+                                this.columnid_MARCA}, true));
+                this.columnid_MARCA.AutoIncrement = true;
+                this.columnid_MARCA.AutoIncrementSeed = -1;
+                this.columnid_MARCA.AutoIncrementStep = -1;
+                this.columnid_MARCA.AllowDBNull = false;
+                this.columnid_MARCA.ReadOnly = true;
+                this.columnid_MARCA.Unique = true;
+                this.columnNombre_MARCA.AllowDBNull = false;
+                this.columnNombre_MARCA.MaxLength = 30;
+                this.columnRUT_MARCA.AllowDBNull = false;
+                this.columnDv_marca.AllowDBNull = false;
+                this.columntelefono.AllowDBNull = false;
+                this.columnemail.MaxLength = 30;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRow NewComunasRow() {
-                return ((ComunasRow)(this.NewRow()));
+            public MARCAS_vhsRow NewMARCAS_vhsRow() {
+                return ((MARCAS_vhsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new ComunasRow(builder);
+                return new MARCAS_vhsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(ComunasRow);
+                return typeof(MARCAS_vhsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.ComunasRowChanged != null)) {
-                    this.ComunasRowChanged(this, new ComunasRowChangeEvent(((ComunasRow)(e.Row)), e.Action));
+                if ((this.MARCAS_vhsRowChanged != null)) {
+                    this.MARCAS_vhsRowChanged(this, new MARCAS_vhsRowChangeEvent(((MARCAS_vhsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -487,8 +517,8 @@ namespace Proyecto_Net_2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.ComunasRowChanging != null)) {
-                    this.ComunasRowChanging(this, new ComunasRowChangeEvent(((ComunasRow)(e.Row)), e.Action));
+                if ((this.MARCAS_vhsRowChanging != null)) {
+                    this.MARCAS_vhsRowChanging(this, new MARCAS_vhsRowChangeEvent(((MARCAS_vhsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -496,8 +526,8 @@ namespace Proyecto_Net_2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.ComunasRowDeleted != null)) {
-                    this.ComunasRowDeleted(this, new ComunasRowChangeEvent(((ComunasRow)(e.Row)), e.Action));
+                if ((this.MARCAS_vhsRowDeleted != null)) {
+                    this.MARCAS_vhsRowDeleted(this, new MARCAS_vhsRowChangeEvent(((MARCAS_vhsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -505,14 +535,14 @@ namespace Proyecto_Net_2 {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.ComunasRowDeleting != null)) {
-                    this.ComunasRowDeleting(this, new ComunasRowChangeEvent(((ComunasRow)(e.Row)), e.Action));
+                if ((this.MARCAS_vhsRowDeleting != null)) {
+                    this.MARCAS_vhsRowDeleting(this, new MARCAS_vhsRowChangeEvent(((MARCAS_vhsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveComunasRow(ComunasRow row) {
+            public void RemoveMARCAS_vhsRow(MARCAS_vhsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -521,7 +551,7 @@ namespace Proyecto_Net_2 {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CAR_MANAGERDataSet1 ds = new CAR_MANAGERDataSet1();
+                CAR_MANAGERDataSet5 ds = new CAR_MANAGERDataSet5();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -539,7 +569,7 @@ namespace Proyecto_Net_2 {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "ComunasDataTable";
+                attribute2.FixedValue = "MARCAS_vhsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -583,59 +613,98 @@ namespace Proyecto_Net_2 {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class ComunasRow : global::System.Data.DataRow {
+        public partial class MARCAS_vhsRow : global::System.Data.DataRow {
             
-            private ComunasDataTable tableComunas;
+            private MARCAS_vhsDataTable tableMARCAS_vhs;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal ComunasRow(global::System.Data.DataRowBuilder rb) : 
+            internal MARCAS_vhsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableComunas = ((ComunasDataTable)(this.Table));
+                this.tableMARCAS_vhs = ((MARCAS_vhsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int id_Comuna {
+            public int id_MARCA {
                 get {
-                    return ((int)(this[this.tableComunas.id_ComunaColumn]));
+                    return ((int)(this[this.tableMARCAS_vhs.id_MARCAColumn]));
                 }
                 set {
-                    this[this.tableComunas.id_ComunaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Nmbre_comuna {
-                get {
-                    return ((string)(this[this.tableComunas.Nmbre_comunaColumn]));
-                }
-                set {
-                    this[this.tableComunas.Nmbre_comunaColumn] = value;
+                    this[this.tableMARCAS_vhs.id_MARCAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int cod_comuna {
+            public string Nombre_MARCA {
                 get {
-                    return ((int)(this[this.tableComunas.cod_comunaColumn]));
+                    return ((string)(this[this.tableMARCAS_vhs.Nombre_MARCAColumn]));
                 }
                 set {
-                    this[this.tableComunas.cod_comunaColumn] = value;
+                    this[this.tableMARCAS_vhs.Nombre_MARCAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int codi_region {
+            public int RUT_MARCA {
                 get {
-                    return ((int)(this[this.tableComunas.codi_regionColumn]));
+                    return ((int)(this[this.tableMARCAS_vhs.RUT_MARCAColumn]));
                 }
                 set {
-                    this[this.tableComunas.codi_regionColumn] = value;
+                    this[this.tableMARCAS_vhs.RUT_MARCAColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int Dv_marca {
+                get {
+                    return ((int)(this[this.tableMARCAS_vhs.Dv_marcaColumn]));
+                }
+                set {
+                    this[this.tableMARCAS_vhs.Dv_marcaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public int telefono {
+                get {
+                    return ((int)(this[this.tableMARCAS_vhs.telefonoColumn]));
+                }
+                set {
+                    this[this.tableMARCAS_vhs.telefonoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string email {
+                get {
+                    try {
+                        return ((string)(this[this.tableMARCAS_vhs.emailColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'email\' de la tabla \'MARCAS_vhs\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableMARCAS_vhs.emailColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsemailNull() {
+                return this.IsNull(this.tableMARCAS_vhs.emailColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetemailNull() {
+                this[this.tableMARCAS_vhs.emailColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -643,22 +712,22 @@ namespace Proyecto_Net_2 {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class ComunasRowChangeEvent : global::System.EventArgs {
+        public class MARCAS_vhsRowChangeEvent : global::System.EventArgs {
             
-            private ComunasRow eventRow;
+            private MARCAS_vhsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRowChangeEvent(ComunasRow row, global::System.Data.DataRowAction action) {
+            public MARCAS_vhsRowChangeEvent(MARCAS_vhsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ComunasRow Row {
+            public MARCAS_vhsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -674,7 +743,7 @@ namespace Proyecto_Net_2 {
         }
     }
 }
-namespace Proyecto_Net_2.CAR_MANAGERDataSet1TableAdapters {
+namespace Proyecto_Net_2.CAR_MANAGERDataSet5TableAdapters {
     
     
     /// <summary>
@@ -686,7 +755,7 @@ namespace Proyecto_Net_2.CAR_MANAGERDataSet1TableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class ComunasTableAdapter : global::System.ComponentModel.Component {
+    public partial class MARCAS_vhsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -700,7 +769,7 @@ namespace Proyecto_Net_2.CAR_MANAGERDataSet1TableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public ComunasTableAdapter() {
+        public MARCAS_vhsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -797,44 +866,53 @@ namespace Proyecto_Net_2.CAR_MANAGERDataSet1TableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Comunas";
-            tableMapping.ColumnMappings.Add("id_Comuna", "id_Comuna");
-            tableMapping.ColumnMappings.Add("Nmbre_comuna", "Nmbre_comuna");
-            tableMapping.ColumnMappings.Add("cod_comuna", "cod_comuna");
-            tableMapping.ColumnMappings.Add("codi_region", "codi_region");
+            tableMapping.DataSetTable = "MARCAS_vhs";
+            tableMapping.ColumnMappings.Add("id_MARCA", "id_MARCA");
+            tableMapping.ColumnMappings.Add("Nombre_MARCA", "Nombre_MARCA");
+            tableMapping.ColumnMappings.Add("RUT_MARCA", "RUT_MARCA");
+            tableMapping.ColumnMappings.Add("Dv_marca", "Dv_marca");
+            tableMapping.ColumnMappings.Add("telefono", "telefono");
+            tableMapping.ColumnMappings.Add("email", "email");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[Comunas] WHERE (([id_Comuna] = @Original_id_Comuna) AND ([Nmbr" +
-                "e_comuna] = @Original_Nmbre_comuna) AND ([cod_comuna] = @Original_cod_comuna) AN" +
-                "D ([codi_region] = @Original_codi_region))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[MARCAS_vhs] WHERE (([id_MARCA] = @Original_id_MARCA) AND ([Nombre_MARCA] = @Original_Nombre_MARCA) AND ([RUT_MARCA] = @Original_RUT_MARCA) AND ([Dv_marca] = @Original_Dv_marca) AND ([telefono] = @Original_telefono) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nmbre_comuna", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nmbre_comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codi_region", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codi_region", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre_MARCA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RUT_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RUT_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dv_marca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dv_marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[Comunas] ([Nmbre_comuna], [cod_comuna], [codi_region]) VALUES " +
-                "(@Nmbre_comuna, @cod_comuna, @codi_region);\r\nSELECT id_Comuna, Nmbre_comuna, cod" +
-                "_comuna, codi_region FROM Comunas WHERE (id_Comuna = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[MARCAS_vhs] ([Nombre_MARCA], [RUT_MARCA], [Dv_marca], [telefono], [email]) VALUES (@Nombre_MARCA, @RUT_MARCA, @Dv_marca, @telefono, @email);
+SELECT id_MARCA, Nombre_MARCA, RUT_MARCA, Dv_marca, telefono, email FROM MARCAS_vhs WHERE (id_MARCA = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nmbre_comuna", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nmbre_comuna", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_comuna", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codi_region", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codi_region", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_MARCA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_MARCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RUT_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RUT_MARCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dv_marca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dv_marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Comunas] SET [Nmbre_comuna] = @Nmbre_comuna, [cod_comuna] = @cod_comuna, [codi_region] = @codi_region WHERE (([id_Comuna] = @Original_id_Comuna) AND ([Nmbre_comuna] = @Original_Nmbre_comuna) AND ([cod_comuna] = @Original_cod_comuna) AND ([codi_region] = @Original_codi_region));
-SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_Comuna = @id_Comuna)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[MARCAS_vhs] SET [Nombre_MARCA] = @Nombre_MARCA, [RUT_MARCA] = @RUT_MARCA, [Dv_marca] = @Dv_marca, [telefono] = @telefono, [email] = @email WHERE (([id_MARCA] = @Original_id_MARCA) AND ([Nombre_MARCA] = @Original_Nombre_MARCA) AND ([RUT_MARCA] = @Original_RUT_MARCA) AND ([Dv_marca] = @Original_Dv_marca) AND ([telefono] = @Original_telefono) AND ((@IsNull_email = 1 AND [email] IS NULL) OR ([email] = @Original_email)));
+SELECT id_MARCA, Nombre_MARCA, RUT_MARCA, Dv_marca, telefono, email FROM MARCAS_vhs WHERE (id_MARCA = @id_MARCA)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nmbre_comuna", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nmbre_comuna", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@cod_comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_comuna", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@codi_region", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codi_region", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_Comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_Comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nmbre_comuna", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nmbre_comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_cod_comuna", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "cod_comuna", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_codi_region", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "codi_region", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_Comuna", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_Comuna", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Nombre_MARCA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_MARCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RUT_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RUT_MARCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dv_marca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dv_marca", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_id_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "id_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Nombre_MARCA", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Nombre_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_RUT_MARCA", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "RUT_MARCA", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dv_marca", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dv_marca", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_telefono", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "telefono", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@IsNull_email", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, true, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_email", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@id_MARCA", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "id_MARCA", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -850,7 +928,8 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM dbo.Comunas";
+            this._commandCollection[0].CommandText = "SELECT id_MARCA, Nombre_MARCA, RUT_MARCA, Dv_marca, telefono, email FROM dbo.MARC" +
+                "AS_vhs";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -858,7 +937,7 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CAR_MANAGERDataSet1.ComunasDataTable dataTable) {
+        public virtual int Fill(CAR_MANAGERDataSet5.MARCAS_vhsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -871,9 +950,9 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CAR_MANAGERDataSet1.ComunasDataTable GetData() {
+        public virtual CAR_MANAGERDataSet5.MARCAS_vhsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CAR_MANAGERDataSet1.ComunasDataTable dataTable = new CAR_MANAGERDataSet1.ComunasDataTable();
+            CAR_MANAGERDataSet5.MARCAS_vhsDataTable dataTable = new CAR_MANAGERDataSet5.MARCAS_vhsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -881,15 +960,15 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CAR_MANAGERDataSet1.ComunasDataTable dataTable) {
+        public virtual int Update(CAR_MANAGERDataSet5.MARCAS_vhsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CAR_MANAGERDataSet1 dataSet) {
-            return this.Adapter.Update(dataSet, "Comunas");
+        public virtual int Update(CAR_MANAGERDataSet5 dataSet) {
+            return this.Adapter.Update(dataSet, "MARCAS_vhs");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -911,16 +990,25 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_id_Comuna, string Original_Nmbre_comuna, int Original_cod_comuna, int Original_codi_region) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_Comuna));
-            if ((Original_Nmbre_comuna == null)) {
-                throw new global::System.ArgumentNullException("Original_Nmbre_comuna");
+        public virtual int Delete(int Original_id_MARCA, string Original_Nombre_MARCA, int Original_RUT_MARCA, int Original_Dv_marca, int Original_telefono, string Original_email) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_id_MARCA));
+            if ((Original_Nombre_MARCA == null)) {
+                throw new global::System.ArgumentNullException("Original_Nombre_MARCA");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nmbre_comuna));
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Nombre_MARCA));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_cod_comuna));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_codi_region));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_RUT_MARCA));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Dv_marca));
+            this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_telefono));
+            if ((Original_email == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_email));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -941,15 +1029,22 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Nmbre_comuna, int cod_comuna, int codi_region) {
-            if ((Nmbre_comuna == null)) {
-                throw new global::System.ArgumentNullException("Nmbre_comuna");
+        public virtual int Insert(string Nombre_MARCA, int RUT_MARCA, int Dv_marca, int telefono, string email) {
+            if ((Nombre_MARCA == null)) {
+                throw new global::System.ArgumentNullException("Nombre_MARCA");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nmbre_comuna));
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Nombre_MARCA));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(cod_comuna));
-            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(codi_region));
+            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(RUT_MARCA));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Dv_marca));
+            this.Adapter.InsertCommand.Parameters[3].Value = ((int)(telefono));
+            if ((email == null)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(email));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -970,25 +1065,41 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nmbre_comuna, int cod_comuna, int codi_region, int Original_id_Comuna, string Original_Nmbre_comuna, int Original_cod_comuna, int Original_codi_region, int id_Comuna) {
-            if ((Nmbre_comuna == null)) {
-                throw new global::System.ArgumentNullException("Nmbre_comuna");
+        public virtual int Update(string Nombre_MARCA, int RUT_MARCA, int Dv_marca, int telefono, string email, int Original_id_MARCA, string Original_Nombre_MARCA, int Original_RUT_MARCA, int Original_Dv_marca, int Original_telefono, string Original_email, int id_MARCA) {
+            if ((Nombre_MARCA == null)) {
+                throw new global::System.ArgumentNullException("Nombre_MARCA");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nmbre_comuna));
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Nombre_MARCA));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(cod_comuna));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(codi_region));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_id_Comuna));
-            if ((Original_Nmbre_comuna == null)) {
-                throw new global::System.ArgumentNullException("Original_Nmbre_comuna");
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(RUT_MARCA));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Dv_marca));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(telefono));
+            if ((email == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Nmbre_comuna));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(email));
             }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_cod_comuna));
-            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(Original_codi_region));
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(id_Comuna));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(Original_id_MARCA));
+            if ((Original_Nombre_MARCA == null)) {
+                throw new global::System.ArgumentNullException("Original_Nombre_MARCA");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Nombre_MARCA));
+            }
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_RUT_MARCA));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Dv_marca));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_telefono));
+            if ((Original_email == null)) {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_email));
+            }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(id_MARCA));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -1009,8 +1120,8 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Nmbre_comuna, int cod_comuna, int codi_region, int Original_id_Comuna, string Original_Nmbre_comuna, int Original_cod_comuna, int Original_codi_region) {
-            return this.Update(Nmbre_comuna, cod_comuna, codi_region, Original_id_Comuna, Original_Nmbre_comuna, Original_cod_comuna, Original_codi_region, Original_id_Comuna);
+        public virtual int Update(string Nombre_MARCA, int RUT_MARCA, int Dv_marca, int telefono, string email, int Original_id_MARCA, string Original_Nombre_MARCA, int Original_RUT_MARCA, int Original_Dv_marca, int Original_telefono, string Original_email) {
+            return this.Update(Nombre_MARCA, RUT_MARCA, Dv_marca, telefono, email, Original_id_MARCA, Original_Nombre_MARCA, Original_RUT_MARCA, Original_Dv_marca, Original_telefono, Original_email, Original_id_MARCA);
         }
     }
     
@@ -1026,7 +1137,7 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         
         private UpdateOrderOption _updateOrder;
         
-        private ComunasTableAdapter _comunasTableAdapter;
+        private MARCAS_vhsTableAdapter _mARCAS_vhsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1048,12 +1159,12 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public ComunasTableAdapter ComunasTableAdapter {
+        public MARCAS_vhsTableAdapter MARCAS_vhsTableAdapter {
             get {
-                return this._comunasTableAdapter;
+                return this._mARCAS_vhsTableAdapter;
             }
             set {
-                this._comunasTableAdapter = value;
+                this._mARCAS_vhsTableAdapter = value;
             }
         }
         
@@ -1076,9 +1187,9 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._comunasTableAdapter != null) 
-                            && (this._comunasTableAdapter.Connection != null))) {
-                    return this._comunasTableAdapter.Connection;
+                if (((this._mARCAS_vhsTableAdapter != null) 
+                            && (this._mARCAS_vhsTableAdapter.Connection != null))) {
+                    return this._mARCAS_vhsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1093,7 +1204,7 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._comunasTableAdapter != null)) {
+                if ((this._mARCAS_vhsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1105,14 +1216,14 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(CAR_MANAGERDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CAR_MANAGERDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._comunasTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Comunas.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._mARCAS_vhsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.MARCAS_vhs.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._comunasTableAdapter.Update(updatedRows));
+                    result = (result + this._mARCAS_vhsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1124,13 +1235,13 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(CAR_MANAGERDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CAR_MANAGERDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._comunasTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Comunas.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._mARCAS_vhsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.MARCAS_vhs.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._comunasTableAdapter.Update(addedRows));
+                    result = (result + this._mARCAS_vhsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1142,13 +1253,13 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(CAR_MANAGERDataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CAR_MANAGERDataSet5 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._comunasTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Comunas.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._mARCAS_vhsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.MARCAS_vhs.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._comunasTableAdapter.Update(deletedRows));
+                    result = (result + this._mARCAS_vhsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1184,15 +1295,15 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(CAR_MANAGERDataSet1 dataSet) {
+        public virtual int UpdateAll(CAR_MANAGERDataSet5 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._comunasTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._comunasTableAdapter.Connection) == false))) {
+            if (((this._mARCAS_vhsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._mARCAS_vhsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Todos los TableAdapters administrados por un TableAdapterManager deben usar la mi" +
                         "sma cadena de conexión.");
             }
@@ -1228,13 +1339,13 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._comunasTableAdapter != null)) {
-                    revertConnections.Add(this._comunasTableAdapter, this._comunasTableAdapter.Connection);
-                    this._comunasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._comunasTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._comunasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._comunasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._comunasTableAdapter.Adapter);
+                if ((this._mARCAS_vhsTableAdapter != null)) {
+                    revertConnections.Add(this._mARCAS_vhsTableAdapter, this._mARCAS_vhsTableAdapter.Connection);
+                    this._mARCAS_vhsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._mARCAS_vhsTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._mARCAS_vhsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._mARCAS_vhsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._mARCAS_vhsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1295,9 +1406,9 @@ SELECT id_Comuna, Nmbre_comuna, cod_comuna, codi_region FROM Comunas WHERE (id_C
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._comunasTableAdapter != null)) {
-                    this._comunasTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._comunasTableAdapter]));
-                    this._comunasTableAdapter.Transaction = null;
+                if ((this._mARCAS_vhsTableAdapter != null)) {
+                    this._mARCAS_vhsTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._mARCAS_vhsTableAdapter]));
+                    this._mARCAS_vhsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
