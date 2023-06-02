@@ -17,6 +17,7 @@ namespace Proyecto_Net_2.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public MARCAS_vhs()
         {
+            this.CNC = new HashSet<CNC>();
             this.STOCK = new HashSet<STOCK>();
         }
     
@@ -24,9 +25,27 @@ namespace Proyecto_Net_2.Model
         public string Nombre_MARCA { get; set; }
         public int RUT_MARCA { get; set; }
         public int Dv_marca { get; set; }
-        public int telefono { get; set; }
-        public string email { get; set; }
+        public int comuna { get; set; }
+        public int region { get; set; }
+        public string direccion { get; set; }
+        public string tip_Vhs_Cam { get; set; }
+        public string tip_Vhs_SUV { get; set; }
+        public string tip_Vhs_Furg { get; set; }
+        public string tip_Vhs_Camioneta { get; set; }
+        public string tip_Vhs_Sed { get; set; }
+        public string Est_VHS_Nuevo { get; set; }
+        public string Est_VHS_Sem_Nue { get; set; }
+        public string Est_VHS_Usado { get; set; }
+        public string Tip_Comb_Gas { get; set; }
+        public string Tip_Comb_Dies { get; set; }
+        public string Tip_Comb_Hibri { get; set; }
+        public string Tip_Comb_Elec { get; set; }
+        public string Tip_Comb_Hidro { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CNC> CNC { get; set; }
+        public virtual Comunas Comunas { get; set; }
+        public virtual region region1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<STOCK> STOCK { get; set; }
     }

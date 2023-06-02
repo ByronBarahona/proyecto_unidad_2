@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CAR_MANAGERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CNC">
+    <Key>
+      <PropertyRef Name="ident_CNC" />
+    </Key>
+    <Property Name="Nom_CNC" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Apell_CNC" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="ident_CNC" Type="int" Nullable="false" />
+    <Property Name="dvf_CNC" Type="int" Nullable="false" />
+    <Property Name="direccion_CNC" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="region" Type="int" Nullable="false" />
+    <Property Name="comuna" Type="int" Nullable="false" />
+    <Property Name="rut_marca" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Comunas">
+    <Key>
+      <PropertyRef Name="id_Comuna" />
+    </Key>
+    <Property Name="id_Comuna" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nmbre_comuna" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cod_comuna" Type="int" Nullable="false" />
+    <Property Name="codi_region" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MARCAS_vhs">
+    <Key>
+      <PropertyRef Name="RUT_MARCA" />
+    </Key>
+    <Property Name="id_MARCA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre_MARCA" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RUT_MARCA" Type="int" Nullable="false" />
+    <Property Name="Dv_marca" Type="int" Nullable="false" />
+    <Property Name="comuna" Type="int" Nullable="false" />
+    <Property Name="region" Type="int" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="60" Nullable="false" />
+    <Property Name="tip_Vhs_Cam" Type="char" MaxLength="1" />
+    <Property Name="tip_Vhs_SUV" Type="char" MaxLength="1" />
+    <Property Name="tip_Vhs_Furg" Type="char" MaxLength="1" />
+    <Property Name="tip_Vhs_Camioneta" Type="char" MaxLength="1" />
+    <Property Name="tip_Vhs_Sed" Type="char" MaxLength="1" />
+    <Property Name="Est_VHS_Nuevo" Type="char" MaxLength="1" />
+    <Property Name="Est_VHS_Sem_Nue" Type="char" MaxLength="1" />
+    <Property Name="Est_VHS_Usado" Type="char" MaxLength="1" />
+    <Property Name="Tip_Comb_Gas" Type="char" MaxLength="1" />
+    <Property Name="Tip_Comb_Dies" Type="char" MaxLength="1" />
+    <Property Name="Tip_Comb_Hibri" Type="char" MaxLength="1" />
+    <Property Name="Tip_Comb_Elec" Type="char" MaxLength="1" />
+    <Property Name="Tip_Comb_Hidro" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="region">
+    <Key>
+      <PropertyRef Name="id_region" />
+    </Key>
+    <Property Name="id_region" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nmbre_region" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cod_region" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STOCK">
+    <Key>
+      <PropertyRef Name="id_modelo" />
+    </Key>
+    <Property Name="id_modelo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Rut_marca" Type="int" />
+    <Property Name="modelo_vhs" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Valor_vhs" Type="money" Nullable="false" />
+    <Property Name="tipo_vhs" Type="int" />
+    <Property Name="Cant_stok" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TIP_PAG">
+    <Key>
+      <PropertyRef Name="id_fp" />
+    </Key>
+    <Property Name="id_fp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Forma_Pag" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="tip_vhs">
+    <Key>
+      <PropertyRef Name="id_tip" />
+    </Key>
+    <Property Name="id_tip" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip_vhs" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="TIPO_USR">
+    <Key>
+      <PropertyRef Name="id_tip_usr" />
+    </Key>
+    <Property Name="id_tip_usr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="tip_usr" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usr_sis">
+    <Key>
+      <PropertyRef Name="id_usr" />
+    </Key>
+    <Property Name="id_usr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="log_usr" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="pass_usr" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="Nombre_usr" />
+      <PropertyRef Name="identi_usr" />
+    </Key>
+    <Property Name="Nombre_usr" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="identi_usr" Type="int" Nullable="false" />
+    <Property Name="apellido_ptn" Type="varchar" MaxLength="30" />
+    <Property Name="apellido_mtn" Type="varchar" MaxLength="30" />
+    <Property Name="Direccion" Type="varchar" MaxLength="30" />
+    <Property Name="Comuna" Type="int" />
+    <Property Name="Region" Type="int" />
+    <Property Name="Tipo_usr" Type="int" />
+  </EntityType>
+  <EntityType Name="VENTAS_VHS">
+    <Key>
+      <PropertyRef Name="id_mov" />
+    </Key>
+    <Property Name="id_mov" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="rut_usr" Type="int" Nullable="false" />
+    <Property Name="nombre_usr" Type="varchar" MaxLength="30" />
+    <Property Name="Ident_Marca" Type="int" Nullable="false" />
+    <Property Name="Nombre_Marca" Type="varchar" MaxLength="30" />
+    <Property Name="VHS" Type="int" />
+    <Property Name="forma_pag" Type="int" />
+  </EntityType>
+  <Association Name="FK__CNC__comuna__38996AB5">
+    <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
+    <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comunas">
+        <PropertyRef Name="id_Comuna" />
+      </Principal>
+      <Dependent Role="CNC">
+        <PropertyRef Name="comuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CNC__region__37A5467C">
+    <End Role="region" Type="Self.region" Multiplicity="1" />
+    <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="id_region" />
+      </Principal>
+      <Dependent Role="CNC">
+        <PropertyRef Name="region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CNC__rut_marca__398D8EEE">
+    <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="1" />
+    <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCAS_vhs">
+        <PropertyRef Name="RUT_MARCA" />
+      </Principal>
+      <Dependent Role="CNC">
+        <PropertyRef Name="rut_marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Comunas__codi_re__30F848ED">
+    <End Role="region" Type="Self.region" Multiplicity="1" />
+    <End Role="Comunas" Type="Self.Comunas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="id_region" />
+      </Principal>
+      <Dependent Role="Comunas">
+        <PropertyRef Name="codi_region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MARCAS_vh__comun__34C8D9D1">
+    <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
+    <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comunas">
+        <PropertyRef Name="id_Comuna" />
+      </Principal>
+      <Dependent Role="MARCAS_vhs">
+        <PropertyRef Name="comuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MARCAS_vh__regio__33D4B598">
+    <End Role="region" Type="Self.region" Multiplicity="1" />
+    <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="id_region" />
+      </Principal>
+      <Dependent Role="MARCAS_vhs">
+        <PropertyRef Name="region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__STOCK__Rut_marca__48CFD27E">
+    <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="0..1" />
+    <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MARCAS_vhs">
+        <PropertyRef Name="RUT_MARCA" />
+      </Principal>
+      <Dependent Role="STOCK">
+        <PropertyRef Name="Rut_marca" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__STOCK__tipo_vhs__49C3F6B7">
+    <End Role="tip_vhs" Type="Self.tip_vhs" Multiplicity="0..1" />
+    <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tip_vhs">
+        <PropertyRef Name="id_tip" />
+      </Principal>
+      <Dependent Role="STOCK">
+        <PropertyRef Name="tipo_vhs" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__Comuna__4BAC3F29">
+    <End Role="Comunas" Type="Self.Comunas" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comunas">
+        <PropertyRef Name="id_Comuna" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="Comuna" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__Region__4CA06362">
+    <End Role="region" Type="Self.region" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="region">
+        <PropertyRef Name="id_region" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="Region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USUARIO__Tipo_us__4D94879B">
+    <End Role="TIPO_USR" Type="Self.TIPO_USR" Multiplicity="0..1" />
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIPO_USR">
+        <PropertyRef Name="id_tip_usr" />
+      </Principal>
+      <Dependent Role="USUARIO">
+        <PropertyRef Name="Tipo_usr" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VENTAS_VH__forma__5165187F">
+    <End Role="TIP_PAG" Type="Self.TIP_PAG" Multiplicity="0..1" />
+    <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TIP_PAG">
+        <PropertyRef Name="id_fp" />
+      </Principal>
+      <Dependent Role="VENTAS_VHS">
+        <PropertyRef Name="forma_pag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__VENTAS_VHS__VHS__5070F446">
+    <End Role="STOCK" Type="Self.STOCK" Multiplicity="0..1" />
+    <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="STOCK">
+        <PropertyRef Name="id_modelo" />
+      </Principal>
+      <Dependent Role="VENTAS_VHS">
+        <PropertyRef Name="VHS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CAR_MANAGERModelStoreContainer">
+    <EntitySet Name="CNC" EntityType="Self.CNC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Comunas" EntityType="Self.Comunas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MARCAS_vhs" EntityType="Self.MARCAS_vhs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="region" EntityType="Self.region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="STOCK" EntityType="Self.STOCK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIP_PAG" EntityType="Self.TIP_PAG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tip_vhs" EntityType="Self.tip_vhs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIPO_USR" EntityType="Self.TIPO_USR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usr_sis" EntityType="Self.usr_sis" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VENTAS_VHS" EntityType="Self.VENTAS_VHS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [USUARIO].[Nombre_usr] AS [Nombre_usr], 
+    [USUARIO].[identi_usr] AS [identi_usr], 
+    [USUARIO].[apellido_ptn] AS [apellido_ptn], 
+    [USUARIO].[apellido_mtn] AS [apellido_mtn], 
+    [USUARIO].[Direccion] AS [Direccion], 
+    [USUARIO].[Comuna] AS [Comuna], 
+    [USUARIO].[Region] AS [Region], 
+    [USUARIO].[Tipo_usr] AS [Tipo_usr]
+    FROM [dbo].[USUARIO] AS [USUARIO]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__CNC__comuna__38996AB5" Association="Self.FK__CNC__comuna__38996AB5">
+      <End Role="Comunas" EntitySet="Comunas" />
+      <End Role="CNC" EntitySet="CNC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CNC__region__37A5467C" Association="Self.FK__CNC__region__37A5467C">
+      <End Role="region" EntitySet="region" />
+      <End Role="CNC" EntitySet="CNC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CNC__rut_marca__398D8EEE" Association="Self.FK__CNC__rut_marca__398D8EEE">
+      <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
+      <End Role="CNC" EntitySet="CNC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Comunas__codi_re__30F848ED" Association="Self.FK__Comunas__codi_re__30F848ED">
+      <End Role="region" EntitySet="region" />
+      <End Role="Comunas" EntitySet="Comunas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MARCAS_vh__comun__34C8D9D1" Association="Self.FK__MARCAS_vh__comun__34C8D9D1">
+      <End Role="Comunas" EntitySet="Comunas" />
+      <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MARCAS_vh__regio__33D4B598" Association="Self.FK__MARCAS_vh__regio__33D4B598">
+      <End Role="region" EntitySet="region" />
+      <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__STOCK__Rut_marca__48CFD27E" Association="Self.FK__STOCK__Rut_marca__48CFD27E">
+      <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
+      <End Role="STOCK" EntitySet="STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__STOCK__tipo_vhs__49C3F6B7" Association="Self.FK__STOCK__tipo_vhs__49C3F6B7">
+      <End Role="tip_vhs" EntitySet="tip_vhs" />
+      <End Role="STOCK" EntitySet="STOCK" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__Comuna__4BAC3F29" Association="Self.FK__USUARIO__Comuna__4BAC3F29">
+      <End Role="Comunas" EntitySet="Comunas" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__Region__4CA06362" Association="Self.FK__USUARIO__Region__4CA06362">
+      <End Role="region" EntitySet="region" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USUARIO__Tipo_us__4D94879B" Association="Self.FK__USUARIO__Tipo_us__4D94879B">
+      <End Role="TIPO_USR" EntitySet="TIPO_USR" />
+      <End Role="USUARIO" EntitySet="USUARIO" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VENTAS_VH__forma__5165187F" Association="Self.FK__VENTAS_VH__forma__5165187F">
+      <End Role="TIP_PAG" EntitySet="TIP_PAG" />
+      <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__VENTAS_VHS__VHS__5070F446" Association="Self.FK__VENTAS_VHS__VHS__5070F446">
+      <End Role="STOCK" EntitySet="STOCK" />
+      <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

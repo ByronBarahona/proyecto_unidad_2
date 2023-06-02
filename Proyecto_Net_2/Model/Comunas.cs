@@ -17,6 +17,8 @@ namespace Proyecto_Net_2.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Comunas()
         {
+            this.CNC = new HashSet<CNC>();
+            this.MARCAS_vhs = new HashSet<MARCAS_vhs>();
             this.USUARIO = new HashSet<USUARIO>();
         }
     
@@ -25,7 +27,11 @@ namespace Proyecto_Net_2.Model
         public int cod_comuna { get; set; }
         public int codi_region { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<CNC> CNC { get; set; }
         public virtual region region { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<MARCAS_vhs> MARCAS_vhs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USUARIO> USUARIO { get; set; }
     }

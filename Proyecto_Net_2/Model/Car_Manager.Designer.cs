@@ -1,4 +1,4 @@
-﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\Model\Conexion_BD.edmx'. 
+﻿// La generación de código T4 está habilitada para el modelo 'C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\Model\Car_Manager.edmx'. 
 // Para habilitar la generación de código heredada, cambie el valor de la propiedad del diseñador 'Estrategia de generación de código'
 // por 'ObjectContext heredado'. Esta propiedad está disponible en la ventana Propiedades cuando se abre
 // el modelo en el diseñador.

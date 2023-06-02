@@ -13,10 +13,10 @@ namespace Proyecto_Net_2.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class CAR_MANAGEREntities : DbContext
+    public partial class CAR_MANAGER_Entities : DbContext
     {
-        public CAR_MANAGEREntities()
-            : base("name=CAR_MANAGEREntities")
+        public CAR_MANAGER_Entities()
+            : base("name=CAR_MANAGER_Entities")
         {
         }
     
@@ -25,14 +25,17 @@ namespace Proyecto_Net_2.Model
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<CNC> CNC { get; set; }
         public virtual DbSet<Comunas> Comunas { get; set; }
         public virtual DbSet<MARCAS_vhs> MARCAS_vhs { get; set; }
         public virtual DbSet<region> region { get; set; }
         public virtual DbSet<STOCK> STOCK { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<TIP_PAG> TIP_PAG { get; set; }
         public virtual DbSet<tip_vhs> tip_vhs { get; set; }
         public virtual DbSet<TIPO_USR> TIPO_USR { get; set; }
         public virtual DbSet<VENTAS_VHS> VENTAS_VHS { get; set; }
         public virtual DbSet<USUARIO> USUARIO { get; set; }
+        public virtual DbSet<usr_sis> usr_sis { get; set; }
     }
 }

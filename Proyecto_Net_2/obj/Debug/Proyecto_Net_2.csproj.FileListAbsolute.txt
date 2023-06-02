@@ -50,3 +50,5 @@ C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\bin\Debug\EntityFramework.
 C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\bin\Debug\EntityFramework.xml
 C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.csproj.CopyComplete
+C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Pago_Credito.resources
+C:\Users\barah\Desktop\Proyecto de Net\Proyecto_Net_2\obj\Debug\Proyecto_Net_2.GUI.Pago_Directo.resources

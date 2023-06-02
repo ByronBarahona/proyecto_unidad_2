@@ -21,7 +21,7 @@ namespace Proyecto_Net_2.Model
         }
     
         public int id_modelo { get; set; }
-        public Nullable<int> id_marca { get; set; }
+        public Nullable<int> Rut_marca { get; set; }
         public string modelo_vhs { get; set; }
         public decimal Valor_vhs { get; set; }
         public Nullable<int> tipo_vhs { get; set; }

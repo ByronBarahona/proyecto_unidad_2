@@ -28,16 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.Lbl_Marcas = new System.Windows.Forms.Label();
             this.Gbox_Datos = new System.Windows.Forms.GroupBox();
             this.Txt_Direccion = new System.Windows.Forms.TextBox();
             this.Lbl_Direccion = new System.Windows.Forms.Label();
             this.Cbox_Comuna = new System.Windows.Forms.ComboBox();
-            this.regionBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cAR_MANAGERDataSet2 = new Proyecto_Net_2.CAR_MANAGERDataSet2();
-            this.comunasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cAR_MANAGERDataSet3 = new Proyecto_Net_2.CAR_MANAGERDataSet3();
             this.Lbl_Comuna = new System.Windows.Forms.Label();
             this.Cbox_Region = new System.Windows.Forms.ComboBox();
             this.Lbl_Region = new System.Windows.Forms.Label();
@@ -74,13 +69,9 @@
             this.Btn_Guardar = new System.Windows.Forms.Button();
             this.Btn_Limpiar = new System.Windows.Forms.Button();
             this.Btn_Volver = new System.Windows.Forms.Button();
-            this.regionTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSet2TableAdapters.regionTableAdapter();
-            this.comunasTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSet3TableAdapters.ComunasTableAdapter();
+            this.Chk_Tip_Comb = new System.Windows.Forms.CheckedListBox();
+            this.Lbl_Tip_Comb = new System.Windows.Forms.Label();
             this.Gbox_Datos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.regionBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comunasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet3)).BeginInit();
             this.Gbox_Inf_Vehiculos.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.Gbox_Botonera.SuspendLayout();
@@ -136,35 +127,12 @@
             // 
             // Cbox_Comuna
             // 
-            this.Cbox_Comuna.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.regionBindingSource, "cod_region", true));
-            this.Cbox_Comuna.DataSource = this.comunasBindingSource;
-            this.Cbox_Comuna.DisplayMember = "Nmbre_comuna";
             this.Cbox_Comuna.FormattingEnabled = true;
             this.Cbox_Comuna.Location = new System.Drawing.Point(489, 36);
             this.Cbox_Comuna.Name = "Cbox_Comuna";
             this.Cbox_Comuna.Size = new System.Drawing.Size(149, 21);
             this.Cbox_Comuna.TabIndex = 8;
             this.Cbox_Comuna.ValueMember = "id_Comuna";
-            // 
-            // regionBindingSource
-            // 
-            this.regionBindingSource.DataMember = "region";
-            this.regionBindingSource.DataSource = this.cAR_MANAGERDataSet2;
-            // 
-            // cAR_MANAGERDataSet2
-            // 
-            this.cAR_MANAGERDataSet2.DataSetName = "CAR_MANAGERDataSet2";
-            this.cAR_MANAGERDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // comunasBindingSource
-            // 
-            this.comunasBindingSource.DataMember = "Comunas";
-            this.comunasBindingSource.DataSource = this.cAR_MANAGERDataSet3;
-            // 
-            // cAR_MANAGERDataSet3
-            // 
-            this.cAR_MANAGERDataSet3.DataSetName = "CAR_MANAGERDataSet3";
-            this.cAR_MANAGERDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Lbl_Comuna
             // 
@@ -177,8 +145,6 @@
             // 
             // Cbox_Region
             // 
-            this.Cbox_Region.DataSource = this.regionBindingSource;
-            this.Cbox_Region.DisplayMember = "Nmbre_region";
             this.Cbox_Region.FormattingEnabled = true;
             this.Cbox_Region.Location = new System.Drawing.Point(302, 37);
             this.Cbox_Region.Name = "Cbox_Region";
@@ -246,6 +212,8 @@
             // Gbox_Inf_Vehiculos
             // 
             this.Gbox_Inf_Vehiculos.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.Gbox_Inf_Vehiculos.Controls.Add(this.Lbl_Tip_Comb);
+            this.Gbox_Inf_Vehiculos.Controls.Add(this.Chk_Tip_Comb);
             this.Gbox_Inf_Vehiculos.Controls.Add(this.ChkBox_Estados_Vehi);
             this.Gbox_Inf_Vehiculos.Controls.Add(this.Lbl_Estados_Vehiculos);
             this.Gbox_Inf_Vehiculos.Controls.Add(this.ChkBox_Tipos_Vehiculos);
@@ -327,9 +295,6 @@
             // 
             // Cbox_Comuina_CNC
             // 
-            this.Cbox_Comuina_CNC.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.regionBindingSource, "id_region", true));
-            this.Cbox_Comuina_CNC.DataSource = this.comunasBindingSource;
-            this.Cbox_Comuina_CNC.DisplayMember = "Nmbre_comuna";
             this.Cbox_Comuina_CNC.FormattingEnabled = true;
             this.Cbox_Comuina_CNC.Location = new System.Drawing.Point(445, 83);
             this.Cbox_Comuina_CNC.Name = "Cbox_Comuina_CNC";
@@ -348,8 +313,6 @@
             // 
             // Cbox_Region_CNC
             // 
-            this.Cbox_Region_CNC.DataSource = this.regionBindingSource;
-            this.Cbox_Region_CNC.DisplayMember = "Nmbre_region";
             this.Cbox_Region_CNC.FormattingEnabled = true;
             this.Cbox_Region_CNC.Location = new System.Drawing.Point(445, 44);
             this.Cbox_Region_CNC.Name = "Cbox_Region_CNC";
@@ -497,6 +460,7 @@
             this.Btn_Guardar.TabIndex = 2;
             this.Btn_Guardar.Text = "Guardar";
             this.Btn_Guardar.UseVisualStyleBackColor = true;
+            this.Btn_Guardar.Click += new System.EventHandler(this.Btn_Guardar_Click);
             // 
             // Btn_Limpiar
             // 
@@ -516,13 +480,28 @@
             this.Btn_Volver.Text = "Volver";
             this.Btn_Volver.UseVisualStyleBackColor = true;
             // 
-            // regionTableAdapter
+            // Chk_Tip_Comb
             // 
-            this.regionTableAdapter.ClearBeforeFill = true;
+            this.Chk_Tip_Comb.FormattingEnabled = true;
+            this.Chk_Tip_Comb.Items.AddRange(new object[] {
+            "Gasolina",
+            "Diesel",
+            "Hibrido",
+            "Electrico",
+            "Hidrogeno"});
+            this.Chk_Tip_Comb.Location = new System.Drawing.Point(304, 36);
+            this.Chk_Tip_Comb.Name = "Chk_Tip_Comb";
+            this.Chk_Tip_Comb.Size = new System.Drawing.Size(120, 94);
+            this.Chk_Tip_Comb.TabIndex = 4;
             // 
-            // comunasTableAdapter
+            // Lbl_Tip_Comb
             // 
-            this.comunasTableAdapter.ClearBeforeFill = true;
+            this.Lbl_Tip_Comb.AutoSize = true;
+            this.Lbl_Tip_Comb.Location = new System.Drawing.Point(310, 20);
+            this.Lbl_Tip_Comb.Name = "Lbl_Tip_Comb";
+            this.Lbl_Tip_Comb.Size = new System.Drawing.Size(101, 13);
+            this.Lbl_Tip_Comb.TabIndex = 5;
+            this.Lbl_Tip_Comb.Text = "Tipo de Combustion";
             // 
             // Adm_Marcas
             // 
@@ -540,10 +519,6 @@
             this.Load += new System.EventHandler(this.Adm_Marcas_Load);
             this.Gbox_Datos.ResumeLayout(false);
             this.Gbox_Datos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.regionBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comunasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet3)).EndInit();
             this.Gbox_Inf_Vehiculos.ResumeLayout(false);
             this.Gbox_Inf_Vehiculos.PerformLayout();
             this.groupBox1.ResumeLayout(false);
@@ -596,12 +571,8 @@
         private System.Windows.Forms.Button Btn_Guardar;
         private System.Windows.Forms.Button Btn_Limpiar;
         private System.Windows.Forms.Button Btn_Volver;
-        private CAR_MANAGERDataSet2 cAR_MANAGERDataSet2;
-        private System.Windows.Forms.BindingSource regionBindingSource;
-        private CAR_MANAGERDataSet2TableAdapters.regionTableAdapter regionTableAdapter;
-        private CAR_MANAGERDataSet3 cAR_MANAGERDataSet3;
-        private System.Windows.Forms.BindingSource comunasBindingSource;
-        private CAR_MANAGERDataSet3TableAdapters.ComunasTableAdapter comunasTableAdapter;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label Lbl_Tip_Comb;
+        private System.Windows.Forms.CheckedListBox Chk_Tip_Comb;
     }
 }

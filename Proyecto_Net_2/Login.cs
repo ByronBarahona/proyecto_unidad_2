@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Proyecto_Net_2.Model;
+using System;
+using System.Drawing.Text;
 using System.Windows.Forms;
 
 namespace Proyecto_Net_2
@@ -8,6 +10,7 @@ namespace Proyecto_Net_2
         public Login()
         {
             InitializeComponent();
+
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
@@ -23,11 +26,22 @@ namespace Proyecto_Net_2
                 MessageBox.Show("Los campos de usuario o contraseña se encuentran vacios");
                 
             }
+
+        }
+        private bool IsvalidUser(string log_usr, string pass_usr)
+        {
+            CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities();
+            var q = from x in cm.usr_sis
+                    where x.log_usr == Txt_Usuario.Text
+                    && x.pass_usr == Txt_Contraseña.Text
+                    select  x;
+            if (q.Any())
+            {
+                return true;
+            }
             else
             {
-
-
-
+                return false;   
             }
         }
 

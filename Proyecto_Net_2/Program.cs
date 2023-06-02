@@ -14,7 +14,7 @@ namespace Proyecto_Net_2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Adm_Marcas());
+            Application.Run(new Login());
         }
     }
 }

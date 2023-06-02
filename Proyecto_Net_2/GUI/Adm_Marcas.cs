@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using Proyecto_Net_2.Model;
+using System.Windows.Forms;
 
 namespace Proyecto_Net_2.GUI
 {
@@ -12,18 +13,31 @@ namespace Proyecto_Net_2.GUI
 
         private void Adm_Marcas_Load(object sender, System.EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet3.Comunas' Puede moverla o quitarla según sea necesario.
-            this.comunasTableAdapter.Fill(this.cAR_MANAGERDataSet3.Comunas);
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet2.region' Puede moverla o quitarla según sea necesario.
-            this.regionTableAdapter.Fill(this.cAR_MANAGERDataSet2.region);
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet1.Comunas' Puede moverla o quitarla según sea necesario.
-            
 
         }
 
         private void button1_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Btn_Guardar_Click(object sender, System.EventArgs e)
+        {
+            using (CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities()) 
+            {
+                MARCAS_vhs M_Vhs = new MARCAS_vhs()
+                {
+                    Nombre_MARCA = Txt_Rso_social.Text,
+                    RUT_MARCA = int.Parse(Txt_Ident.Text),
+                    Dv_marca = int.Parse(Txt_Dig_Veri.Text),
+                    comuna = Cbox_Comuna.SelectedIndex,
+                    region = Cbox_Region.SelectedIndex,
+                    direccion = Txt_Direccion.Text,
+                    tip_Vhs_Cam = ,
+
+
+                };
+            }
         }
     }
 }
