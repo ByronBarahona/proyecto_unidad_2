@@ -58,7 +58,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.regionTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSetTableAdapters.regionTableAdapter();
             this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -67,9 +66,8 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
             this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.cAR_MANAGERDataSet4 = new Proyecto_Net_2.CAR_MANAGERDataSet4();
+            
             this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.sTOCKTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSet4TableAdapters.STOCKTableAdapter();
             this.idmodeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idmarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.modelovhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,7 +81,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -377,7 +374,6 @@
             // 
             // regionTableAdapter
             // 
-            this.regionTableAdapter.ClearBeforeFill = true;
             // 
             // label9
             // 
@@ -452,17 +448,13 @@
             // 
             // cAR_MANAGERDataSet4
             // 
-            this.cAR_MANAGERDataSet4.DataSetName = "CAR_MANAGERDataSet4";
-            this.cAR_MANAGERDataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sTOCKBindingSource
             // 
             this.sTOCKBindingSource.DataMember = "STOCK";
-            this.sTOCKBindingSource.DataSource = this.cAR_MANAGERDataSet4;
             // 
             // sTOCKTableAdapter
             // 
-            this.sTOCKTableAdapter.ClearBeforeFill = true;
             // 
             // idmodeloDataGridViewTextBoxColumn
             // 
@@ -528,7 +520,6 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -566,7 +557,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label6;
-        private CAR_MANAGERDataSetTableAdapters.regionTableAdapter regionTableAdapter;
+        
         private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button2;
@@ -575,9 +566,9 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
-        private CAR_MANAGERDataSet4 cAR_MANAGERDataSet4;
+        
         private System.Windows.Forms.BindingSource sTOCKBindingSource;
-        private CAR_MANAGERDataSet4TableAdapters.STOCKTableAdapter sTOCKTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn idmodeloDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idmarcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelovhsDataGridViewTextBoxColumn;

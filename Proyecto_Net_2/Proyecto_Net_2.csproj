@@ -56,6 +56,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CAR_MANAGERDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CAR_MANAGERDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Adm_Marcas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +215,50 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Car_Manager.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CAR_MANAGERDataSet.xsc">
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet.xss">
+      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xsc">
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet1.xss">
+      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xsc">
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet2.xss">
+      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xsc">
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CAR_MANAGERDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CAR_MANAGERDataSet3.xss">
+      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+    </None>
     <None Include="Model\Car_Manager.edmx.diagram">
       <DependentUpon>Car_Manager.edmx</DependentUpon>
     </None>

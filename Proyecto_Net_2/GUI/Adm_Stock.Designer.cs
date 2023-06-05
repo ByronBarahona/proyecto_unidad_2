@@ -47,9 +47,9 @@
             this.Btn_Limpiar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Nuevo = new System.Windows.Forms.Button();
-            this.cAR_MANAGERDataSet5 = new Proyecto_Net_2.CAR_MANAGERDataSet5();
+            
             this.mARCASvhsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.mARCAS_vhsTableAdapter = new Proyecto_Net_2.CAR_MANAGERDataSet5TableAdapters.MARCAS_vhsTableAdapter();
+            
             this.idMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rUTMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,7 +60,7 @@
             this.Gbox_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).BeginInit();
             this.Gbox_Botonera.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet5)).BeginInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -245,17 +245,16 @@
             // 
             // cAR_MANAGERDataSet5
             // 
-            this.cAR_MANAGERDataSet5.DataSetName = "CAR_MANAGERDataSet5";
-            this.cAR_MANAGERDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            
             // 
             // mARCASvhsBindingSource
             // 
             this.mARCASvhsBindingSource.DataMember = "MARCAS_vhs";
-            this.mARCASvhsBindingSource.DataSource = this.cAR_MANAGERDataSet5;
+            
             // 
             // mARCAS_vhsTableAdapter
             // 
-            this.mARCAS_vhsTableAdapter.ClearBeforeFill = true;
+            
             // 
             // idMARCADataGridViewTextBoxColumn
             // 
@@ -311,7 +310,7 @@
             this.Gbox_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).EndInit();
             this.Gbox_Botonera.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.cAR_MANAGERDataSet5)).EndInit();
+            
             ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -338,9 +337,9 @@
         private System.Windows.Forms.Button Btn_Limpiar;
         private System.Windows.Forms.Button Btn_Modificar;
         private System.Windows.Forms.Button Btn_Nuevo;
-        private CAR_MANAGERDataSet5 cAR_MANAGERDataSet5;
+        
         private System.Windows.Forms.BindingSource mARCASvhsBindingSource;
-        private CAR_MANAGERDataSet5TableAdapters.MARCAS_vhsTableAdapter mARCAS_vhsTableAdapter;
+        
         private System.Windows.Forms.DataGridViewTextBoxColumn idMARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreMARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rUTMARCADataGridViewTextBoxColumn;

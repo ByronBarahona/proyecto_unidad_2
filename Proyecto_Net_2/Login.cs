@@ -10,7 +10,27 @@ namespace Proyecto_Net_2
         public Login()
         {
             InitializeComponent();
+            IsvalidUser();
+        }
 
+        private void IsvalidUser()
+        {
+            using (CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities())
+            {
+                usr_sis us = new usr_sis();
+                var q = from p in us.Login()
+                        where p.log_usr = Txt_Usuario.Text
+                        && p.pass_usr = Txt_Contraseña.Text
+                        select p;
+                if (q.Any())
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
         }
 
         private void Btn_Salir_Click(object sender, EventArgs e)
@@ -26,24 +46,15 @@ namespace Proyecto_Net_2
                 MessageBox.Show("Los campos de usuario o contraseña se encuentran vacios");
                 
             }
-
-        }
-        private bool IsvalidUser(string log_usr, string pass_usr)
-        {
-            CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities();
-            var q = from x in cm.usr_sis
-                    where x.log_usr == Txt_Usuario.Text
-                    && x.pass_usr == Txt_Contraseña.Text
-                    select  x;
-            if (q.Any())
-            {
-                return true;
-            }
             else
             {
-                return false;   
+                IsvalidUser();
             }
+
+        }
+  
+
         }
 
     }
-}
+
