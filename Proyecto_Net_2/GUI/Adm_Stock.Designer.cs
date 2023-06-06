@@ -47,21 +47,20 @@
             this.Btn_Limpiar = new System.Windows.Forms.Button();
             this.Btn_Modificar = new System.Windows.Forms.Button();
             this.Btn_Nuevo = new System.Windows.Forms.Button();
-            
-            this.mARCASvhsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            
-            this.idMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.rUTMARCADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dvmarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefonoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.carga_Grilla_Stock = new Proyecto_Net_2.Carga_Grilla_Stock();
+            this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.sTOCKTableAdapter = new Proyecto_Net_2.Carga_Grilla_StockTableAdapters.STOCKTableAdapter();
+            this.idmodeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.modelovhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorvhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipovhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantstokDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gboc_Filtros.SuspendLayout();
             this.Gbox_Data.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).BeginInit();
             this.Gbox_Botonera.SuspendLayout();
-            
-            ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carga_Grilla_Stock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // Lbl_Stock
@@ -171,13 +170,12 @@
             this.DtGridView_Stock.AutoGenerateColumns = false;
             this.DtGridView_Stock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DtGridView_Stock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idMARCADataGridViewTextBoxColumn,
-            this.nombreMARCADataGridViewTextBoxColumn,
-            this.rUTMARCADataGridViewTextBoxColumn,
-            this.dvmarcaDataGridViewTextBoxColumn,
-            this.telefonoDataGridViewTextBoxColumn,
-            this.emailDataGridViewTextBoxColumn});
-            this.DtGridView_Stock.DataSource = this.mARCASvhsBindingSource;
+            this.idmodeloDataGridViewTextBoxColumn,
+            this.modelovhsDataGridViewTextBoxColumn,
+            this.valorvhsDataGridViewTextBoxColumn,
+            this.tipovhsDataGridViewTextBoxColumn,
+            this.cantstokDataGridViewTextBoxColumn});
+            this.DtGridView_Stock.DataSource = this.sTOCKBindingSource;
             this.DtGridView_Stock.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DtGridView_Stock.Location = new System.Drawing.Point(3, 16);
             this.DtGridView_Stock.Name = "DtGridView_Stock";
@@ -243,55 +241,50 @@
             this.Btn_Nuevo.Text = "Nuevo";
             this.Btn_Nuevo.UseVisualStyleBackColor = true;
             // 
-            // cAR_MANAGERDataSet5
+            // carga_Grilla_Stock
             // 
-            
+            this.carga_Grilla_Stock.DataSetName = "Carga_Grilla_Stock";
+            this.carga_Grilla_Stock.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // mARCASvhsBindingSource
+            // sTOCKBindingSource
             // 
-            this.mARCASvhsBindingSource.DataMember = "MARCAS_vhs";
-            
+            this.sTOCKBindingSource.DataMember = "STOCK";
+            this.sTOCKBindingSource.DataSource = this.carga_Grilla_Stock;
             // 
-            // mARCAS_vhsTableAdapter
+            // sTOCKTableAdapter
             // 
-            
+            this.sTOCKTableAdapter.ClearBeforeFill = true;
             // 
-            // idMARCADataGridViewTextBoxColumn
+            // idmodeloDataGridViewTextBoxColumn
             // 
-            this.idMARCADataGridViewTextBoxColumn.DataPropertyName = "id_MARCA";
-            this.idMARCADataGridViewTextBoxColumn.HeaderText = "Codigo Marca";
-            this.idMARCADataGridViewTextBoxColumn.Name = "idMARCADataGridViewTextBoxColumn";
-            this.idMARCADataGridViewTextBoxColumn.ReadOnly = true;
+            this.idmodeloDataGridViewTextBoxColumn.DataPropertyName = "id_modelo";
+            this.idmodeloDataGridViewTextBoxColumn.HeaderText = "id_modelo";
+            this.idmodeloDataGridViewTextBoxColumn.Name = "idmodeloDataGridViewTextBoxColumn";
+            this.idmodeloDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // nombreMARCADataGridViewTextBoxColumn
+            // modelovhsDataGridViewTextBoxColumn
             // 
-            this.nombreMARCADataGridViewTextBoxColumn.DataPropertyName = "Nombre_MARCA";
-            this.nombreMARCADataGridViewTextBoxColumn.HeaderText = "Razón Social";
-            this.nombreMARCADataGridViewTextBoxColumn.Name = "nombreMARCADataGridViewTextBoxColumn";
+            this.modelovhsDataGridViewTextBoxColumn.DataPropertyName = "modelo_vhs";
+            this.modelovhsDataGridViewTextBoxColumn.HeaderText = "modelo_vhs";
+            this.modelovhsDataGridViewTextBoxColumn.Name = "modelovhsDataGridViewTextBoxColumn";
             // 
-            // rUTMARCADataGridViewTextBoxColumn
+            // valorvhsDataGridViewTextBoxColumn
             // 
-            this.rUTMARCADataGridViewTextBoxColumn.DataPropertyName = "RUT_MARCA";
-            this.rUTMARCADataGridViewTextBoxColumn.HeaderText = "Rut Marca";
-            this.rUTMARCADataGridViewTextBoxColumn.Name = "rUTMARCADataGridViewTextBoxColumn";
+            this.valorvhsDataGridViewTextBoxColumn.DataPropertyName = "Valor_vhs";
+            this.valorvhsDataGridViewTextBoxColumn.HeaderText = "Valor_vhs";
+            this.valorvhsDataGridViewTextBoxColumn.Name = "valorvhsDataGridViewTextBoxColumn";
             // 
-            // dvmarcaDataGridViewTextBoxColumn
+            // tipovhsDataGridViewTextBoxColumn
             // 
-            this.dvmarcaDataGridViewTextBoxColumn.DataPropertyName = "Dv_marca";
-            this.dvmarcaDataGridViewTextBoxColumn.HeaderText = "Digito Verificador";
-            this.dvmarcaDataGridViewTextBoxColumn.Name = "dvmarcaDataGridViewTextBoxColumn";
+            this.tipovhsDataGridViewTextBoxColumn.DataPropertyName = "tipo_vhs";
+            this.tipovhsDataGridViewTextBoxColumn.HeaderText = "tipo_vhs";
+            this.tipovhsDataGridViewTextBoxColumn.Name = "tipovhsDataGridViewTextBoxColumn";
             // 
-            // telefonoDataGridViewTextBoxColumn
+            // cantstokDataGridViewTextBoxColumn
             // 
-            this.telefonoDataGridViewTextBoxColumn.DataPropertyName = "telefono";
-            this.telefonoDataGridViewTextBoxColumn.HeaderText = "Telefono";
-            this.telefonoDataGridViewTextBoxColumn.Name = "telefonoDataGridViewTextBoxColumn";
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.cantstokDataGridViewTextBoxColumn.DataPropertyName = "Cant_stok";
+            this.cantstokDataGridViewTextBoxColumn.HeaderText = "Cant_stok";
+            this.cantstokDataGridViewTextBoxColumn.Name = "cantstokDataGridViewTextBoxColumn";
             // 
             // Adm_Stock
             // 
@@ -310,8 +303,8 @@
             this.Gbox_Data.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DtGridView_Stock)).EndInit();
             this.Gbox_Botonera.ResumeLayout(false);
-            
-            ((System.ComponentModel.ISupportInitialize)(this.mARCASvhsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.carga_Grilla_Stock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -338,13 +331,19 @@
         private System.Windows.Forms.Button Btn_Modificar;
         private System.Windows.Forms.Button Btn_Nuevo;
         
-        private System.Windows.Forms.BindingSource mARCASvhsBindingSource;
-        
         private System.Windows.Forms.DataGridViewTextBoxColumn idMARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreMARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rUTMARCADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dvmarcaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefonoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private Carga_Grilla_Stock carga_Grilla_Stock;
+        private System.Windows.Forms.BindingSource sTOCKBindingSource;
+        private Carga_Grilla_StockTableAdapters.STOCKTableAdapter sTOCKTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idmodeloDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn modelovhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorvhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tipovhsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cantstokDataGridViewTextBoxColumn;
     }
 }

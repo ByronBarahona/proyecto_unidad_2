@@ -19,8 +19,10 @@ namespace Proyecto_Net_2.GUI
 
         private void Adm_Stock_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet5.MARCAS_vhs' Puede moverla o quitarla según sea necesario.
-            
+            // TODO: esta línea de código carga datos en la tabla 'carga_Grilla_Stock.STOCK' Puede moverla o quitarla según sea necesario.
+            this.sTOCKTableAdapter.Fill(this.carga_Grilla_Stock.STOCK);
+            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet.STOCK' Puede moverla o quitarla según sea necesario.
+
 
         }
     }

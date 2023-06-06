@@ -10,12 +10,12 @@ namespace Proyecto_Net_2
         public Login()
         {
             InitializeComponent();
-            IsvalidUser();
+            
         }
 
         private void IsvalidUser()
         {
-            using (CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities())
+            using (CAR_MANAGEREntities cm = new CAR_MANAGEREntities())
             {
                 usr_sis us = new usr_sis();
                 var q = from p in us.Login()
@@ -43,8 +43,8 @@ namespace Proyecto_Net_2
         {
             if (String.IsNullOrEmpty(Txt_Usuario.Text) || String.IsNullOrEmpty(Txt_Contraseña.Text))
             {
-                MessageBox.Show("Los campos de usuario o contraseña se encuentran vacios");
-                
+                MessageBox.Show("Los campos de usuario o contraseña se encuentran vacíos");
+
             }
             else
             {
@@ -52,9 +52,9 @@ namespace Proyecto_Net_2
             }
 
         }
-  
 
-        }
 
     }
+
+}
 

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="CAR_MANAGERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="CAR_MANAGERModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CNC">
           <Key>
             <PropertyRef Name="ident_CNC" />
@@ -23,7 +23,7 @@
             <PropertyRef Name="id_Comuna" />
           </Key>
           <Property Name="id_Comuna" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nmbre_comuna" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nmbre_comuna" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="cod_comuna" Type="int" Nullable="false" />
           <Property Name="codi_region" Type="int" Nullable="false" />
         </EntityType>
@@ -57,7 +57,7 @@
             <PropertyRef Name="id_region" />
           </Key>
           <Property Name="id_region" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Nmbre_region" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Nmbre_region" Type="varchar" MaxLength="60" Nullable="false" />
           <Property Name="cod_region" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="STOCK">
@@ -87,6 +87,13 @@
           </Key>
           <Property Name="id_fp" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Forma_Pag" Type="varchar" MaxLength="15" />
+        </EntityType>
+        <EntityType Name="Tip_Pagos">
+          <Key>
+            <PropertyRef Name="Id_tip_pago" />
+          </Key>
+          <Property Name="Id_tip_pago" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Descrep" Type="varchar" MaxLength="60" Nullable="false" />
         </EntityType>
         <EntityType Name="tip_vhs">
           <Key>
@@ -138,7 +145,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="VHS" Type="int" />
           <Property Name="forma_pag" Type="int" />
         </EntityType>
-        <Association Name="FK__CNC__comuna__38996AB5">
+        <Association Name="FK__CNC__comuna__25518C17">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -150,7 +157,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CNC__region__37A5467C">
+        <Association Name="FK__CNC__region__245D67DE">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -162,7 +169,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CNC__rut_marca__398D8EEE">
+        <Association Name="FK__CNC__rut_marca__2645B050">
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -174,7 +181,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comunas__codi_re__30F848ED">
+        <Association Name="FK__Comunas__codi_re__05D8E0BE">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -186,7 +193,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MARCAS_vh__comun__34C8D9D1">
+        <Association Name="FK__MARCAS_vh__comun__0E6E26BF">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -198,7 +205,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MARCAS_vh__regio__33D4B598">
+        <Association Name="FK__MARCAS_vh__regio__0D7A0286">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -210,7 +217,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__STOCK__Rut_marca__48CFD27E">
+        <Association Name="FK__STOCK__Rut_marca__1DB06A4F">
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="0..1" />
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
           <ReferentialConstraint>
@@ -222,7 +229,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__STOCK__tipo_vhs__49C3F6B7">
+        <Association Name="FK__STOCK__tipo_vhs__1EA48E88">
           <End Role="tip_vhs" Type="Self.tip_vhs" Multiplicity="0..1" />
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
           <ReferentialConstraint>
@@ -234,7 +241,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Comuna__4BAC3F29">
+        <Association Name="FK__USUARIO__Comuna__114A936A">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -246,7 +253,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Region__4CA06362">
+        <Association Name="FK__USUARIO__Region__123EB7A3">
           <End Role="region" Type="Self.region" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -258,7 +265,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Tipo_us__4D94879B">
+        <Association Name="FK__USUARIO__Tipo_us__1332DBDC">
           <End Role="TIPO_USR" Type="Self.TIPO_USR" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -270,7 +277,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VENTAS_VH__forma__5165187F">
+        <Association Name="FK__VENTAS_VH__forma__2DE6D218">
           <End Role="TIP_PAG" Type="Self.TIP_PAG" Multiplicity="0..1" />
           <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -282,7 +289,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VENTAS_VHS__VHS__5070F446">
+        <Association Name="FK__VENTAS_VHS__VHS__2CF2ADDF">
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="0..1" />
           <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -302,6 +309,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <EntitySet Name="STOCK" EntityType="Self.STOCK" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIP_PAG" EntityType="Self.TIP_PAG" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tip_Pagos" EntityType="Self.Tip_Pagos" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tip_vhs" EntityType="Self.tip_vhs" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TIPO_USR" EntityType="Self.TIPO_USR" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="usr_sis" EntityType="Self.usr_sis" Schema="dbo" store:Type="Tables" />
@@ -318,60 +326,61 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
     [USUARIO].[Tipo_usr] AS [Tipo_usr]
     FROM [dbo].[USUARIO] AS [USUARIO]</DefiningQuery>
           </EntitySet>
-          <AssociationSet Name="FK__CNC__comuna__38996AB5" Association="Self.FK__CNC__comuna__38996AB5">
+          <AssociationSet Name="FK__CNC__comuna__25518C17" Association="Self.FK__CNC__comuna__25518C17">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__CNC__region__37A5467C" Association="Self.FK__CNC__region__37A5467C">
+          <AssociationSet Name="FK__CNC__region__245D67DE" Association="Self.FK__CNC__region__245D67DE">
             <End Role="region" EntitySet="region" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__CNC__rut_marca__398D8EEE" Association="Self.FK__CNC__rut_marca__398D8EEE">
+          <AssociationSet Name="FK__CNC__rut_marca__2645B050" Association="Self.FK__CNC__rut_marca__2645B050">
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comunas__codi_re__30F848ED" Association="Self.FK__Comunas__codi_re__30F848ED">
+          <AssociationSet Name="FK__Comunas__codi_re__05D8E0BE" Association="Self.FK__Comunas__codi_re__05D8E0BE">
             <End Role="region" EntitySet="region" />
             <End Role="Comunas" EntitySet="Comunas" />
           </AssociationSet>
-          <AssociationSet Name="FK__MARCAS_vh__comun__34C8D9D1" Association="Self.FK__MARCAS_vh__comun__34C8D9D1">
+          <AssociationSet Name="FK__MARCAS_vh__comun__0E6E26BF" Association="Self.FK__MARCAS_vh__comun__0E6E26BF">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
           </AssociationSet>
-          <AssociationSet Name="FK__MARCAS_vh__regio__33D4B598" Association="Self.FK__MARCAS_vh__regio__33D4B598">
+          <AssociationSet Name="FK__MARCAS_vh__regio__0D7A0286" Association="Self.FK__MARCAS_vh__regio__0D7A0286">
             <End Role="region" EntitySet="region" />
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
           </AssociationSet>
-          <AssociationSet Name="FK__STOCK__Rut_marca__48CFD27E" Association="Self.FK__STOCK__Rut_marca__48CFD27E">
+          <AssociationSet Name="FK__STOCK__Rut_marca__1DB06A4F" Association="Self.FK__STOCK__Rut_marca__1DB06A4F">
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
             <End Role="STOCK" EntitySet="STOCK" />
           </AssociationSet>
-          <AssociationSet Name="FK__STOCK__tipo_vhs__49C3F6B7" Association="Self.FK__STOCK__tipo_vhs__49C3F6B7">
+          <AssociationSet Name="FK__STOCK__tipo_vhs__1EA48E88" Association="Self.FK__STOCK__tipo_vhs__1EA48E88">
             <End Role="tip_vhs" EntitySet="tip_vhs" />
             <End Role="STOCK" EntitySet="STOCK" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Comuna__4BAC3F29" Association="Self.FK__USUARIO__Comuna__4BAC3F29">
+          <AssociationSet Name="FK__USUARIO__Comuna__114A936A" Association="Self.FK__USUARIO__Comuna__114A936A">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Region__4CA06362" Association="Self.FK__USUARIO__Region__4CA06362">
+          <AssociationSet Name="FK__USUARIO__Region__123EB7A3" Association="Self.FK__USUARIO__Region__123EB7A3">
             <End Role="region" EntitySet="region" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Tipo_us__4D94879B" Association="Self.FK__USUARIO__Tipo_us__4D94879B">
+          <AssociationSet Name="FK__USUARIO__Tipo_us__1332DBDC" Association="Self.FK__USUARIO__Tipo_us__1332DBDC">
             <End Role="TIPO_USR" EntitySet="TIPO_USR" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__VENTAS_VH__forma__5165187F" Association="Self.FK__VENTAS_VH__forma__5165187F">
+          <AssociationSet Name="FK__VENTAS_VH__forma__2DE6D218" Association="Self.FK__VENTAS_VH__forma__2DE6D218">
             <End Role="TIP_PAG" EntitySet="TIP_PAG" />
             <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
           </AssociationSet>
-          <AssociationSet Name="FK__VENTAS_VHS__VHS__5070F446" Association="Self.FK__VENTAS_VHS__VHS__5070F446">
+          <AssociationSet Name="FK__VENTAS_VHS__VHS__2CF2ADDF" Association="Self.FK__VENTAS_VHS__VHS__2CF2ADDF">
             <End Role="STOCK" EntitySet="STOCK" />
             <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CAR_MANAGERModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -387,22 +396,22 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="region" Type="Int32" Nullable="false" />
           <Property Name="comuna" Type="Int32" Nullable="false" />
           <Property Name="rut_marca" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Comunas" Relationship="Self.FK__CNC__comuna__38996AB5" FromRole="CNC" ToRole="Comunas" />
-          <NavigationProperty Name="region1" Relationship="Self.FK__CNC__region__37A5467C" FromRole="CNC" ToRole="region" />
-          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__CNC__rut_marca__398D8EEE" FromRole="CNC" ToRole="MARCAS_vhs" />
+          <NavigationProperty Name="Comunas" Relationship="Self.FK__CNC__comuna__25518C17" FromRole="CNC" ToRole="Comunas" />
+          <NavigationProperty Name="region1" Relationship="Self.FK__CNC__region__245D67DE" FromRole="CNC" ToRole="region" />
+          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__CNC__rut_marca__2645B050" FromRole="CNC" ToRole="MARCAS_vhs" />
         </EntityType>
         <EntityType Name="Comunas">
           <Key>
             <PropertyRef Name="id_Comuna" />
           </Key>
           <Property Name="id_Comuna" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nmbre_comuna" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nmbre_comuna" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cod_comuna" Type="Int32" Nullable="false" />
           <Property Name="codi_region" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__comuna__38996AB5" FromRole="Comunas" ToRole="CNC" />
-          <NavigationProperty Name="region" Relationship="Self.FK__Comunas__codi_re__30F848ED" FromRole="Comunas" ToRole="region" />
-          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__MARCAS_vh__comun__34C8D9D1" FromRole="Comunas" ToRole="MARCAS_vhs" />
-          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Comuna__4BAC3F29" FromRole="Comunas" ToRole="USUARIO" />
+          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__comuna__25518C17" FromRole="Comunas" ToRole="CNC" />
+          <NavigationProperty Name="region" Relationship="Self.FK__Comunas__codi_re__05D8E0BE" FromRole="Comunas" ToRole="region" />
+          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__MARCAS_vh__comun__0E6E26BF" FromRole="Comunas" ToRole="MARCAS_vhs" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Comuna__114A936A" FromRole="Comunas" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="MARCAS_vhs">
           <Key>
@@ -428,22 +437,22 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="Tip_Comb_Hibri" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="Tip_Comb_Elec" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="Tip_Comb_Hidro" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__rut_marca__398D8EEE" FromRole="MARCAS_vhs" ToRole="CNC" />
-          <NavigationProperty Name="Comunas" Relationship="Self.FK__MARCAS_vh__comun__34C8D9D1" FromRole="MARCAS_vhs" ToRole="Comunas" />
-          <NavigationProperty Name="region1" Relationship="Self.FK__MARCAS_vh__regio__33D4B598" FromRole="MARCAS_vhs" ToRole="region" />
-          <NavigationProperty Name="STOCK" Relationship="Self.FK__STOCK__Rut_marca__48CFD27E" FromRole="MARCAS_vhs" ToRole="STOCK" />
+          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__rut_marca__2645B050" FromRole="MARCAS_vhs" ToRole="CNC" />
+          <NavigationProperty Name="Comunas" Relationship="Self.FK__MARCAS_vh__comun__0E6E26BF" FromRole="MARCAS_vhs" ToRole="Comunas" />
+          <NavigationProperty Name="region1" Relationship="Self.FK__MARCAS_vh__regio__0D7A0286" FromRole="MARCAS_vhs" ToRole="region" />
+          <NavigationProperty Name="STOCK" Relationship="Self.FK__STOCK__Rut_marca__1DB06A4F" FromRole="MARCAS_vhs" ToRole="STOCK" />
         </EntityType>
         <EntityType Name="region">
           <Key>
             <PropertyRef Name="id_region" />
           </Key>
           <Property Name="id_region" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Nmbre_region" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Nmbre_region" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="cod_region" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__region__37A5467C" FromRole="region" ToRole="CNC" />
-          <NavigationProperty Name="Comunas" Relationship="Self.FK__Comunas__codi_re__30F848ED" FromRole="region" ToRole="Comunas" />
-          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__MARCAS_vh__regio__33D4B598" FromRole="region" ToRole="MARCAS_vhs" />
-          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Region__4CA06362" FromRole="region" ToRole="USUARIO" />
+          <NavigationProperty Name="CNC" Relationship="Self.FK__CNC__region__245D67DE" FromRole="region" ToRole="CNC" />
+          <NavigationProperty Name="Comunas" Relationship="Self.FK__Comunas__codi_re__05D8E0BE" FromRole="region" ToRole="Comunas" />
+          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__MARCAS_vh__regio__0D7A0286" FromRole="region" ToRole="MARCAS_vhs" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Region__123EB7A3" FromRole="region" ToRole="USUARIO" />
         </EntityType>
         <EntityType Name="STOCK">
           <Key>
@@ -455,9 +464,9 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="Valor_vhs" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
           <Property Name="tipo_vhs" Type="Int32" />
           <Property Name="Cant_stok" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__STOCK__Rut_marca__48CFD27E" FromRole="STOCK" ToRole="MARCAS_vhs" />
-          <NavigationProperty Name="tip_vhs" Relationship="Self.FK__STOCK__tipo_vhs__49C3F6B7" FromRole="STOCK" ToRole="tip_vhs" />
-          <NavigationProperty Name="VENTAS_VHS" Relationship="Self.FK__VENTAS_VHS__VHS__5070F446" FromRole="STOCK" ToRole="VENTAS_VHS" />
+          <NavigationProperty Name="MARCAS_vhs" Relationship="Self.FK__STOCK__Rut_marca__1DB06A4F" FromRole="STOCK" ToRole="MARCAS_vhs" />
+          <NavigationProperty Name="tip_vhs" Relationship="Self.FK__STOCK__tipo_vhs__1EA48E88" FromRole="STOCK" ToRole="tip_vhs" />
+          <NavigationProperty Name="VENTAS_VHS" Relationship="Self.FK__VENTAS_VHS__VHS__2CF2ADDF" FromRole="STOCK" ToRole="VENTAS_VHS" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -475,7 +484,14 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           </Key>
           <Property Name="id_fp" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Forma_Pag" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="VENTAS_VHS" Relationship="Self.FK__VENTAS_VH__forma__5165187F" FromRole="TIP_PAG" ToRole="VENTAS_VHS" />
+          <NavigationProperty Name="VENTAS_VHS" Relationship="Self.FK__VENTAS_VH__forma__2DE6D218" FromRole="TIP_PAG" ToRole="VENTAS_VHS" />
+        </EntityType>
+        <EntityType Name="Tip_Pagos">
+          <Key>
+            <PropertyRef Name="Id_tip_pago" />
+          </Key>
+          <Property Name="Id_tip_pago" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descrep" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="tip_vhs">
           <Key>
@@ -483,7 +499,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           </Key>
           <Property Name="id_tip" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tip_vhs1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="STOCK" Relationship="Self.FK__STOCK__tipo_vhs__49C3F6B7" FromRole="tip_vhs" ToRole="STOCK" />
+          <NavigationProperty Name="STOCK" Relationship="Self.FK__STOCK__tipo_vhs__1EA48E88" FromRole="tip_vhs" ToRole="STOCK" />
         </EntityType>
         <EntityType Name="TIPO_USR">
           <Key>
@@ -491,7 +507,15 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           </Key>
           <Property Name="id_tip_usr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="tip_usr" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Tipo_us__4D94879B" FromRole="TIPO_USR" ToRole="USUARIO" />
+          <NavigationProperty Name="USUARIO" Relationship="Self.FK__USUARIO__Tipo_us__1332DBDC" FromRole="TIPO_USR" ToRole="USUARIO" />
+        </EntityType>
+        <EntityType Name="usr_sis">
+          <Key>
+            <PropertyRef Name="id_usr" />
+          </Key>
+          <Property Name="id_usr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="log_usr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="pass_usr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="VENTAS_VHS">
           <Key>
@@ -504,8 +528,8 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="Nombre_Marca" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="VHS" Type="Int32" />
           <Property Name="forma_pag" Type="Int32" />
-          <NavigationProperty Name="STOCK" Relationship="Self.FK__VENTAS_VHS__VHS__5070F446" FromRole="VENTAS_VHS" ToRole="STOCK" />
-          <NavigationProperty Name="TIP_PAG" Relationship="Self.FK__VENTAS_VH__forma__5165187F" FromRole="VENTAS_VHS" ToRole="TIP_PAG" />
+          <NavigationProperty Name="STOCK" Relationship="Self.FK__VENTAS_VHS__VHS__2CF2ADDF" FromRole="VENTAS_VHS" ToRole="STOCK" />
+          <NavigationProperty Name="TIP_PAG" Relationship="Self.FK__VENTAS_VH__forma__2DE6D218" FromRole="VENTAS_VHS" ToRole="TIP_PAG" />
         </EntityType>
         <EntityType Name="USUARIO">
           <Key>
@@ -520,11 +544,11 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <Property Name="Comuna" Type="Int32" />
           <Property Name="Region" Type="Int32" />
           <Property Name="Tipo_usr" Type="Int32" />
-          <NavigationProperty Name="Comunas" Relationship="Self.FK__USUARIO__Comuna__4BAC3F29" FromRole="USUARIO" ToRole="Comunas" />
-          <NavigationProperty Name="region1" Relationship="Self.FK__USUARIO__Region__4CA06362" FromRole="USUARIO" ToRole="region" />
-          <NavigationProperty Name="TIPO_USR1" Relationship="Self.FK__USUARIO__Tipo_us__4D94879B" FromRole="USUARIO" ToRole="TIPO_USR" />
+          <NavigationProperty Name="Comunas" Relationship="Self.FK__USUARIO__Comuna__114A936A" FromRole="USUARIO" ToRole="Comunas" />
+          <NavigationProperty Name="region1" Relationship="Self.FK__USUARIO__Region__123EB7A3" FromRole="USUARIO" ToRole="region" />
+          <NavigationProperty Name="TIPO_USR1" Relationship="Self.FK__USUARIO__Tipo_us__1332DBDC" FromRole="USUARIO" ToRole="TIPO_USR" />
         </EntityType>
-        <Association Name="FK__CNC__comuna__38996AB5">
+        <Association Name="FK__CNC__comuna__25518C17">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -536,7 +560,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CNC__region__37A5467C">
+        <Association Name="FK__CNC__region__245D67DE">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -548,7 +572,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__CNC__rut_marca__398D8EEE">
+        <Association Name="FK__CNC__rut_marca__2645B050">
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="1" />
           <End Role="CNC" Type="Self.CNC" Multiplicity="*" />
           <ReferentialConstraint>
@@ -560,7 +584,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__Comunas__codi_re__30F848ED">
+        <Association Name="FK__Comunas__codi_re__05D8E0BE">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="*" />
           <ReferentialConstraint>
@@ -572,7 +596,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MARCAS_vh__comun__34C8D9D1">
+        <Association Name="FK__MARCAS_vh__comun__0E6E26BF">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="1" />
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -584,7 +608,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Comuna__4BAC3F29">
+        <Association Name="FK__USUARIO__Comuna__114A936A">
           <End Role="Comunas" Type="Self.Comunas" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -596,7 +620,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__MARCAS_vh__regio__33D4B598">
+        <Association Name="FK__MARCAS_vh__regio__0D7A0286">
           <End Role="region" Type="Self.region" Multiplicity="1" />
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="*" />
           <ReferentialConstraint>
@@ -608,7 +632,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__STOCK__Rut_marca__48CFD27E">
+        <Association Name="FK__STOCK__Rut_marca__1DB06A4F">
           <End Role="MARCAS_vhs" Type="Self.MARCAS_vhs" Multiplicity="0..1" />
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
           <ReferentialConstraint>
@@ -620,7 +644,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Region__4CA06362">
+        <Association Name="FK__USUARIO__Region__123EB7A3">
           <End Role="region" Type="Self.region" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -632,7 +656,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__STOCK__tipo_vhs__49C3F6B7">
+        <Association Name="FK__STOCK__tipo_vhs__1EA48E88">
           <End Role="tip_vhs" Type="Self.tip_vhs" Multiplicity="0..1" />
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="*" />
           <ReferentialConstraint>
@@ -644,7 +668,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VENTAS_VHS__VHS__5070F446">
+        <Association Name="FK__VENTAS_VHS__VHS__2CF2ADDF">
           <End Role="STOCK" Type="Self.STOCK" Multiplicity="0..1" />
           <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -656,7 +680,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__VENTAS_VH__forma__5165187F">
+        <Association Name="FK__VENTAS_VH__forma__2DE6D218">
           <End Role="TIP_PAG" Type="Self.TIP_PAG" Multiplicity="0..1" />
           <End Role="VENTAS_VHS" Type="Self.VENTAS_VHS" Multiplicity="*" />
           <ReferentialConstraint>
@@ -668,7 +692,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__USUARIO__Tipo_us__4D94879B">
+        <Association Name="FK__USUARIO__Tipo_us__1332DBDC">
           <End Role="TIPO_USR" Type="Self.TIPO_USR" Multiplicity="0..1" />
           <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
           <ReferentialConstraint>
@@ -680,7 +704,7 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="CAR_MANAGER_Entities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="CAR_MANAGEREntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CNC" EntityType="Self.CNC" />
           <EntitySet Name="Comunas" EntityType="Self.Comunas" />
           <EntitySet Name="MARCAS_vhs" EntityType="Self.MARCAS_vhs" />
@@ -688,78 +712,71 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
           <EntitySet Name="STOCK" EntityType="Self.STOCK" />
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
           <EntitySet Name="TIP_PAG" EntityType="Self.TIP_PAG" />
+          <EntitySet Name="Tip_Pagos" EntityType="Self.Tip_Pagos" />
           <EntitySet Name="tip_vhs" EntityType="Self.tip_vhs" />
           <EntitySet Name="TIPO_USR" EntityType="Self.TIPO_USR" />
+          <EntitySet Name="usr_sis" EntityType="Self.usr_sis" />
           <EntitySet Name="VENTAS_VHS" EntityType="Self.VENTAS_VHS" />
           <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
-          <AssociationSet Name="FK__CNC__comuna__38996AB5" Association="Self.FK__CNC__comuna__38996AB5">
+          <AssociationSet Name="FK__CNC__comuna__25518C17" Association="Self.FK__CNC__comuna__25518C17">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__CNC__region__37A5467C" Association="Self.FK__CNC__region__37A5467C">
+          <AssociationSet Name="FK__CNC__region__245D67DE" Association="Self.FK__CNC__region__245D67DE">
             <End Role="region" EntitySet="region" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__CNC__rut_marca__398D8EEE" Association="Self.FK__CNC__rut_marca__398D8EEE">
+          <AssociationSet Name="FK__CNC__rut_marca__2645B050" Association="Self.FK__CNC__rut_marca__2645B050">
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
             <End Role="CNC" EntitySet="CNC" />
           </AssociationSet>
-          <AssociationSet Name="FK__Comunas__codi_re__30F848ED" Association="Self.FK__Comunas__codi_re__30F848ED">
+          <AssociationSet Name="FK__Comunas__codi_re__05D8E0BE" Association="Self.FK__Comunas__codi_re__05D8E0BE">
             <End Role="region" EntitySet="region" />
             <End Role="Comunas" EntitySet="Comunas" />
           </AssociationSet>
-          <AssociationSet Name="FK__MARCAS_vh__comun__34C8D9D1" Association="Self.FK__MARCAS_vh__comun__34C8D9D1">
+          <AssociationSet Name="FK__MARCAS_vh__comun__0E6E26BF" Association="Self.FK__MARCAS_vh__comun__0E6E26BF">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Comuna__4BAC3F29" Association="Self.FK__USUARIO__Comuna__4BAC3F29">
+          <AssociationSet Name="FK__USUARIO__Comuna__114A936A" Association="Self.FK__USUARIO__Comuna__114A936A">
             <End Role="Comunas" EntitySet="Comunas" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__MARCAS_vh__regio__33D4B598" Association="Self.FK__MARCAS_vh__regio__33D4B598">
+          <AssociationSet Name="FK__MARCAS_vh__regio__0D7A0286" Association="Self.FK__MARCAS_vh__regio__0D7A0286">
             <End Role="region" EntitySet="region" />
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
           </AssociationSet>
-          <AssociationSet Name="FK__STOCK__Rut_marca__48CFD27E" Association="Self.FK__STOCK__Rut_marca__48CFD27E">
+          <AssociationSet Name="FK__STOCK__Rut_marca__1DB06A4F" Association="Self.FK__STOCK__Rut_marca__1DB06A4F">
             <End Role="MARCAS_vhs" EntitySet="MARCAS_vhs" />
             <End Role="STOCK" EntitySet="STOCK" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Region__4CA06362" Association="Self.FK__USUARIO__Region__4CA06362">
+          <AssociationSet Name="FK__USUARIO__Region__123EB7A3" Association="Self.FK__USUARIO__Region__123EB7A3">
             <End Role="region" EntitySet="region" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <AssociationSet Name="FK__STOCK__tipo_vhs__49C3F6B7" Association="Self.FK__STOCK__tipo_vhs__49C3F6B7">
+          <AssociationSet Name="FK__STOCK__tipo_vhs__1EA48E88" Association="Self.FK__STOCK__tipo_vhs__1EA48E88">
             <End Role="tip_vhs" EntitySet="tip_vhs" />
             <End Role="STOCK" EntitySet="STOCK" />
           </AssociationSet>
-          <AssociationSet Name="FK__VENTAS_VHS__VHS__5070F446" Association="Self.FK__VENTAS_VHS__VHS__5070F446">
+          <AssociationSet Name="FK__VENTAS_VHS__VHS__2CF2ADDF" Association="Self.FK__VENTAS_VHS__VHS__2CF2ADDF">
             <End Role="STOCK" EntitySet="STOCK" />
             <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
           </AssociationSet>
-          <AssociationSet Name="FK__VENTAS_VH__forma__5165187F" Association="Self.FK__VENTAS_VH__forma__5165187F">
+          <AssociationSet Name="FK__VENTAS_VH__forma__2DE6D218" Association="Self.FK__VENTAS_VH__forma__2DE6D218">
             <End Role="TIP_PAG" EntitySet="TIP_PAG" />
             <End Role="VENTAS_VHS" EntitySet="VENTAS_VHS" />
           </AssociationSet>
-          <AssociationSet Name="FK__USUARIO__Tipo_us__4D94879B" Association="Self.FK__USUARIO__Tipo_us__4D94879B">
+          <AssociationSet Name="FK__USUARIO__Tipo_us__1332DBDC" Association="Self.FK__USUARIO__Tipo_us__1332DBDC">
             <End Role="TIPO_USR" EntitySet="TIPO_USR" />
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
-          <EntitySet Name="usr_sis" EntityType="CAR_MANAGERModel.usr_sis" />
         </EntityContainer>
-        <EntityType Name="usr_sis">
-          <Key>
-            <PropertyRef Name="id_usr" />
-          </Key>
-          <Property Name="id_usr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="log_usr" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pass_usr" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="CAR_MANAGERModelStoreContainer" CdmEntityContainer="CAR_MANAGER_Entities">
+        <EntityContainerMapping StorageEntityContainer="CAR_MANAGERModelStoreContainer" CdmEntityContainer="CAR_MANAGEREntities">
           <EntitySetMapping Name="CNC">
             <EntityTypeMapping TypeName="CAR_MANAGERModel.CNC">
               <MappingFragment StoreEntitySet="CNC">
@@ -850,6 +867,14 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="Tip_Pagos">
+            <EntityTypeMapping TypeName="CAR_MANAGERModel.Tip_Pagos">
+              <MappingFragment StoreEntitySet="Tip_Pagos">
+                <ScalarProperty Name="Id_tip_pago" ColumnName="Id_tip_pago" />
+                <ScalarProperty Name="Descrep" ColumnName="Descrep" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="tip_vhs">
             <EntityTypeMapping TypeName="CAR_MANAGERModel.tip_vhs">
               <MappingFragment StoreEntitySet="tip_vhs">
@@ -863,6 +888,15 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
               <MappingFragment StoreEntitySet="TIPO_USR">
                 <ScalarProperty Name="id_tip_usr" ColumnName="id_tip_usr" />
                 <ScalarProperty Name="tip_usr" ColumnName="tip_usr" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="usr_sis">
+            <EntityTypeMapping TypeName="CAR_MANAGERModel.usr_sis">
+              <MappingFragment StoreEntitySet="usr_sis">
+                <ScalarProperty Name="id_usr" ColumnName="id_usr" />
+                <ScalarProperty Name="log_usr" ColumnName="log_usr" />
+                <ScalarProperty Name="pass_usr" ColumnName="pass_usr" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -890,15 +924,6 @@ advertencia 6002: La tabla o vista 'CAR_MANAGER.dbo.USUARIO' no tiene definida n
                 <ScalarProperty Name="Comuna" ColumnName="Comuna" />
                 <ScalarProperty Name="Region" ColumnName="Region" />
                 <ScalarProperty Name="Tipo_usr" ColumnName="Tipo_usr" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="usr_sis">
-            <EntityTypeMapping TypeName="CAR_MANAGERModel.usr_sis">
-              <MappingFragment StoreEntitySet="usr_sis">
-                <ScalarProperty Name="pass_usr" ColumnName="pass_usr" />
-                <ScalarProperty Name="log_usr" ColumnName="log_usr" />
-                <ScalarProperty Name="id_usr" ColumnName="id_usr" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             this.Lbl_Ventas = new System.Windows.Forms.Label();
             this.Gbox_Filtros = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
@@ -57,19 +59,16 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button6 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            
+            this.button5 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.carga_Grilla_Ventas = new Proyecto_Net_2.Carga_Grilla_Ventas();
             this.sTOCKBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idmodeloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idmarcaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTOCKTableAdapter = new Proyecto_Net_2.Carga_Grilla_VentasTableAdapters.STOCKTableAdapter();
             this.modelovhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorvhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tipovhsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,6 +80,7 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.carga_Grilla_Ventas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,6 +116,23 @@
             this.Gbox_Filtros.TabIndex = 3;
             this.Gbox_Filtros.TabStop = false;
             this.Gbox_Filtros.Text = "Filtros De Búsqueda";
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(323, 86);
+            this.maskedTextBox3.Mask = "000,0000";
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(53, 20);
+            this.maskedTextBox3.TabIndex = 11;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(248, 93);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(69, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Tasa Interes:";
             // 
             // textBox2
             // 
@@ -216,8 +233,6 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idmodeloDataGridViewTextBoxColumn,
-            this.idmarcaDataGridViewTextBoxColumn,
             this.modelovhsDataGridViewTextBoxColumn,
             this.valorvhsDataGridViewTextBoxColumn,
             this.tipovhsDataGridViewTextBoxColumn,
@@ -359,6 +374,24 @@
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(122, 20);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(37, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Ver";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(110, 13);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Documentos de Pago";
+            // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -372,44 +405,14 @@
             this.groupBox5.TabIndex = 8;
             this.groupBox5.TabStop = false;
             // 
-            // regionTableAdapter
+            // button6
             // 
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(110, 13);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Documentos de Pago";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(122, 20);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(37, 23);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Ver";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(686, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 0;
-            this.button3.Text = "Volver";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(524, 11);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "Vender";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button6.Location = new System.Drawing.Point(443, 11);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(75, 23);
+            this.button6.TabIndex = 9;
+            this.button6.Text = "Buscar";
+            this.button6.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -420,54 +423,37 @@
             this.button5.Text = "Limpiar";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // button4
             // 
-            this.button6.Location = new System.Drawing.Point(443, 11);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 23);
-            this.button6.TabIndex = 9;
-            this.button6.Text = "Buscar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button4.Location = new System.Drawing.Point(524, 11);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "Vender";
+            this.button4.UseVisualStyleBackColor = true;
             // 
-            // label10
+            // button3
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(248, 93);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Tasa Interes:";
+            this.button3.Location = new System.Drawing.Point(686, 11);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 0;
+            this.button3.Text = "Volver";
+            this.button3.UseVisualStyleBackColor = true;
             // 
-            // maskedTextBox3
+            // carga_Grilla_Ventas
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(323, 86);
-            this.maskedTextBox3.Mask = "000,0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(53, 20);
-            this.maskedTextBox3.TabIndex = 11;
-            // 
-            // cAR_MANAGERDataSet4
-            // 
+            this.carga_Grilla_Ventas.DataSetName = "Carga_Grilla_Ventas";
+            this.carga_Grilla_Ventas.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // sTOCKBindingSource
             // 
             this.sTOCKBindingSource.DataMember = "STOCK";
+            this.sTOCKBindingSource.DataSource = this.carga_Grilla_Ventas;
             // 
             // sTOCKTableAdapter
             // 
-            // 
-            // idmodeloDataGridViewTextBoxColumn
-            // 
-            this.idmodeloDataGridViewTextBoxColumn.DataPropertyName = "id_modelo";
-            this.idmodeloDataGridViewTextBoxColumn.HeaderText = "Codigo Vehiculo";
-            this.idmodeloDataGridViewTextBoxColumn.Name = "idmodeloDataGridViewTextBoxColumn";
-            this.idmodeloDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // idmarcaDataGridViewTextBoxColumn
-            // 
-            this.idmarcaDataGridViewTextBoxColumn.DataPropertyName = "id_marca";
-            this.idmarcaDataGridViewTextBoxColumn.HeaderText = "Codigo Marca";
-            this.idmarcaDataGridViewTextBoxColumn.Name = "idmarcaDataGridViewTextBoxColumn";
+            this.sTOCKTableAdapter.ClearBeforeFill = true;
             // 
             // modelovhsDataGridViewTextBoxColumn
             // 
@@ -490,7 +476,7 @@
             // cantstokDataGridViewTextBoxColumn
             // 
             this.cantstokDataGridViewTextBoxColumn.DataPropertyName = "Cant_stok";
-            this.cantstokDataGridViewTextBoxColumn.HeaderText = "Cantidad Disponible";
+            this.cantstokDataGridViewTextBoxColumn.HeaderText = "Cantidad Stock";
             this.cantstokDataGridViewTextBoxColumn.Name = "cantstokDataGridViewTextBoxColumn";
             // 
             // Ventas
@@ -520,6 +506,7 @@
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.carga_Grilla_Ventas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sTOCKBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -567,10 +554,15 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         
+
+
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private Carga_Grilla_Ventas carga_Grilla_Ventas;
         private System.Windows.Forms.BindingSource sTOCKBindingSource;
-        
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmodeloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idmarcaDataGridViewTextBoxColumn;
+        private Carga_Grilla_VentasTableAdapters.STOCKTableAdapter sTOCKTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn modelovhsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorvhsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tipovhsDataGridViewTextBoxColumn;

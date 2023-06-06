@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CAR_MANAGERModelStoreContainer" CdmEntityContainer="CAR_MANAGEREntities">
+    <EntitySetMapping Name="CNC">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.CNC">
+        <MappingFragment StoreEntitySet="CNC">
+          <ScalarProperty Name="Nom_CNC" ColumnName="Nom_CNC" />
+          <ScalarProperty Name="Apell_CNC" ColumnName="Apell_CNC" />
+          <ScalarProperty Name="ident_CNC" ColumnName="ident_CNC" />
+          <ScalarProperty Name="dvf_CNC" ColumnName="dvf_CNC" />
+          <ScalarProperty Name="direccion_CNC" ColumnName="direccion_CNC" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="comuna" ColumnName="comuna" />
+          <ScalarProperty Name="rut_marca" ColumnName="rut_marca" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comunas">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.Comunas">
+        <MappingFragment StoreEntitySet="Comunas">
+          <ScalarProperty Name="id_Comuna" ColumnName="id_Comuna" />
+          <ScalarProperty Name="Nmbre_comuna" ColumnName="Nmbre_comuna" />
+          <ScalarProperty Name="cod_comuna" ColumnName="cod_comuna" />
+          <ScalarProperty Name="codi_region" ColumnName="codi_region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MARCAS_vhs">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.MARCAS_vhs">
+        <MappingFragment StoreEntitySet="MARCAS_vhs">
+          <ScalarProperty Name="id_MARCA" ColumnName="id_MARCA" />
+          <ScalarProperty Name="Nombre_MARCA" ColumnName="Nombre_MARCA" />
+          <ScalarProperty Name="RUT_MARCA" ColumnName="RUT_MARCA" />
+          <ScalarProperty Name="Dv_marca" ColumnName="Dv_marca" />
+          <ScalarProperty Name="comuna" ColumnName="comuna" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="tip_Vhs_Cam" ColumnName="tip_Vhs_Cam" />
+          <ScalarProperty Name="tip_Vhs_SUV" ColumnName="tip_Vhs_SUV" />
+          <ScalarProperty Name="tip_Vhs_Furg" ColumnName="tip_Vhs_Furg" />
+          <ScalarProperty Name="tip_Vhs_Camioneta" ColumnName="tip_Vhs_Camioneta" />
+          <ScalarProperty Name="tip_Vhs_Sed" ColumnName="tip_Vhs_Sed" />
+          <ScalarProperty Name="Est_VHS_Nuevo" ColumnName="Est_VHS_Nuevo" />
+          <ScalarProperty Name="Est_VHS_Sem_Nue" ColumnName="Est_VHS_Sem_Nue" />
+          <ScalarProperty Name="Est_VHS_Usado" ColumnName="Est_VHS_Usado" />
+          <ScalarProperty Name="Tip_Comb_Gas" ColumnName="Tip_Comb_Gas" />
+          <ScalarProperty Name="Tip_Comb_Dies" ColumnName="Tip_Comb_Dies" />
+          <ScalarProperty Name="Tip_Comb_Hibri" ColumnName="Tip_Comb_Hibri" />
+          <ScalarProperty Name="Tip_Comb_Elec" ColumnName="Tip_Comb_Elec" />
+          <ScalarProperty Name="Tip_Comb_Hidro" ColumnName="Tip_Comb_Hidro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="region">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.region">
+        <MappingFragment StoreEntitySet="region">
+          <ScalarProperty Name="id_region" ColumnName="id_region" />
+          <ScalarProperty Name="Nmbre_region" ColumnName="Nmbre_region" />
+          <ScalarProperty Name="cod_region" ColumnName="cod_region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STOCK">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.STOCK">
+        <MappingFragment StoreEntitySet="STOCK">
+          <ScalarProperty Name="id_modelo" ColumnName="id_modelo" />
+          <ScalarProperty Name="Rut_marca" ColumnName="Rut_marca" />
+          <ScalarProperty Name="modelo_vhs" ColumnName="modelo_vhs" />
+          <ScalarProperty Name="Valor_vhs" ColumnName="Valor_vhs" />
+          <ScalarProperty Name="tipo_vhs" ColumnName="tipo_vhs" />
+          <ScalarProperty Name="Cant_stok" ColumnName="Cant_stok" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIP_PAG">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.TIP_PAG">
+        <MappingFragment StoreEntitySet="TIP_PAG">
+          <ScalarProperty Name="id_fp" ColumnName="id_fp" />
+          <ScalarProperty Name="Forma_Pag" ColumnName="Forma_Pag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tip_Pagos">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.Tip_Pagos">
+        <MappingFragment StoreEntitySet="Tip_Pagos">
+          <ScalarProperty Name="Id_tip_pago" ColumnName="Id_tip_pago" />
+          <ScalarProperty Name="Descrep" ColumnName="Descrep" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tip_vhs">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.tip_vhs">
+        <MappingFragment StoreEntitySet="tip_vhs">
+          <ScalarProperty Name="id_tip" ColumnName="id_tip" />
+          <ScalarProperty Name="tip_vhs1" ColumnName="tip_vhs" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIPO_USR">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.TIPO_USR">
+        <MappingFragment StoreEntitySet="TIPO_USR">
+          <ScalarProperty Name="id_tip_usr" ColumnName="id_tip_usr" />
+          <ScalarProperty Name="tip_usr" ColumnName="tip_usr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usr_sis">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.usr_sis">
+        <MappingFragment StoreEntitySet="usr_sis">
+          <ScalarProperty Name="id_usr" ColumnName="id_usr" />
+          <ScalarProperty Name="log_usr" ColumnName="log_usr" />
+          <ScalarProperty Name="pass_usr" ColumnName="pass_usr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VENTAS_VHS">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.VENTAS_VHS">
+        <MappingFragment StoreEntitySet="VENTAS_VHS">
+          <ScalarProperty Name="id_mov" ColumnName="id_mov" />
+          <ScalarProperty Name="rut_usr" ColumnName="rut_usr" />
+          <ScalarProperty Name="nombre_usr" ColumnName="nombre_usr" />
+          <ScalarProperty Name="Ident_Marca" ColumnName="Ident_Marca" />
+          <ScalarProperty Name="Nombre_Marca" ColumnName="Nombre_Marca" />
+          <ScalarProperty Name="VHS" ColumnName="VHS" />
+          <ScalarProperty Name="forma_pag" ColumnName="forma_pag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="CAR_MANAGERModel.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="Nombre_usr" ColumnName="Nombre_usr" />
+          <ScalarProperty Name="identi_usr" ColumnName="identi_usr" />
+          <ScalarProperty Name="apellido_ptn" ColumnName="apellido_ptn" />
+          <ScalarProperty Name="apellido_mtn" ColumnName="apellido_mtn" />
+          <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+          <ScalarProperty Name="Comuna" ColumnName="Comuna" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="Tipo_usr" ColumnName="Tipo_usr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -56,25 +56,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CAR_MANAGERDataSet.Designer.cs">
+    <Compile Include="Carga_Comunas_Cnc.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
+      <DependentUpon>Carga_Comunas_Cnc.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CAR_MANAGERDataSet1.Designer.cs">
+    <Compile Include="Carga_Comunas_Marca.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
+      <DependentUpon>Carga_Comunas_Marca.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CAR_MANAGERDataSet2.Designer.cs">
+    <Compile Include="Carga_Grilla_Stock.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
+      <DependentUpon>Carga_Grilla_Stock.xsd</DependentUpon>
     </Compile>
-    <Compile Include="CAR_MANAGERDataSet3.Designer.cs">
+    <Compile Include="Carga_Grilla_Ventas.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
+      <DependentUpon>Carga_Grilla_Ventas.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_Region_Cnc.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carga_Region_Cnc.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Carga_Region_Marca.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Carga_Region_Marca.xsd</DependentUpon>
     </Compile>
     <Compile Include="GUI\Adm_Marcas.cs">
       <SubType>Form</SubType>
@@ -124,56 +134,60 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Model\Car_Manager.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car_Manager.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Car_Manager.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car_Manager.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model\Car_Manager.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Car_Manager.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Model\CNC.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\Comunas.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Conexion.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Conexion.edmx</DependentUpon>
     </Compile>
     <Compile Include="Model\MARCAS_vhs.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\region.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\STOCK.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\sysdiagrams.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TIPO_USR.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\TIP_PAG.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Tip_Pagos.cs">
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\tip_vhs.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\usr_sis.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Model\USUARIO.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model\Validación_Mod11.cs" />
     <Compile Include="Model\VENTAS_VHS.cs">
-      <DependentUpon>Car_Manager.tt</DependentUpon>
+      <DependentUpon>Conexion.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -211,56 +225,78 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="Model\Car_Manager.edmx">
+    <None Include="Carga_Comunas_Cnc.xsc">
+      <DependentUpon>Carga_Comunas_Cnc.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Comunas_Cnc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Comunas_Cnc.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Comunas_Cnc.xss">
+      <DependentUpon>Carga_Comunas_Cnc.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Comunas_Marca.xsc">
+      <DependentUpon>Carga_Comunas_Marca.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Comunas_Marca.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Comunas_Marca.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Comunas_Marca.xss">
+      <DependentUpon>Carga_Comunas_Marca.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Grilla_Stock.xsc">
+      <DependentUpon>Carga_Grilla_Stock.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Grilla_Stock.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Grilla_Stock.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Grilla_Stock.xss">
+      <DependentUpon>Carga_Grilla_Stock.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Grilla_Ventas.xsc">
+      <DependentUpon>Carga_Grilla_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Grilla_Ventas.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Grilla_Ventas.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Grilla_Ventas.xss">
+      <DependentUpon>Carga_Grilla_Ventas.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Region_Cnc.xsc">
+      <DependentUpon>Carga_Region_Cnc.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Region_Cnc.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Region_Cnc.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Region_Cnc.xss">
+      <DependentUpon>Carga_Region_Cnc.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Region_Marca.xsc">
+      <DependentUpon>Carga_Region_Marca.xsd</DependentUpon>
+    </None>
+    <None Include="Carga_Region_Marca.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Carga_Region_Marca.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Carga_Region_Marca.xss">
+      <DependentUpon>Carga_Region_Marca.xsd</DependentUpon>
+    </None>
+    <EntityDeploy Include="Model\Conexion.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Car_Manager.Designer.cs</LastGenOutput>
+      <LastGenOutput>Conexion.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CAR_MANAGERDataSet.xsc">
-      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CAR_MANAGERDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CAR_MANAGERDataSet.xss">
-      <DependentUpon>CAR_MANAGERDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet1.xsc">
-      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CAR_MANAGERDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CAR_MANAGERDataSet1.xss">
-      <DependentUpon>CAR_MANAGERDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet2.xsc">
-      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CAR_MANAGERDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CAR_MANAGERDataSet2.xss">
-      <DependentUpon>CAR_MANAGERDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet3.xsc">
-      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="CAR_MANAGERDataSet3.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CAR_MANAGERDataSet3.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CAR_MANAGERDataSet3.xss">
-      <DependentUpon>CAR_MANAGERDataSet3.xsd</DependentUpon>
-    </None>
-    <None Include="Model\Car_Manager.edmx.diagram">
-      <DependentUpon>Car_Manager.edmx</DependentUpon>
+    <None Include="Model\Conexion.edmx.diagram">
+      <DependentUpon>Conexion.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -283,15 +319,15 @@
     <None Include="Imagenes\Logotipo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Model\Car_Manager.Context.tt">
+    <Content Include="Model\Conexion.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Car_Manager.edmx</DependentUpon>
-      <LastGenOutput>Car_Manager.Context.cs</LastGenOutput>
+      <DependentUpon>Conexion.edmx</DependentUpon>
+      <LastGenOutput>Conexion.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Model\Car_Manager.tt">
+    <Content Include="Model\Conexion.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Car_Manager.edmx</DependentUpon>
-      <LastGenOutput>Car_Manager.cs</LastGenOutput>
+      <DependentUpon>Conexion.edmx</DependentUpon>
+      <LastGenOutput>Conexion.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

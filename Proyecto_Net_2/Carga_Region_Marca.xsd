@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="CAR_MANAGERDataSet" targetNamespace="http://tempuri.org/CAR_MANAGERDataSet.xsd" xmlns:mstns="http://tempuri.org/CAR_MANAGERDataSet.xsd" xmlns="http://tempuri.org/CAR_MANAGERDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="Carga_Region_Marca" targetNamespace="http://tempuri.org/Carga_Region_Marca.xsd" xmlns:mstns="http://tempuri.org/Carga_Region_Marca.xsd" xmlns="http://tempuri.org/Carga_Region_Marca.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -64,7 +64,7 @@ SELECT id_region, Nmbre_region, cod_region FROM region WHERE (id_region = @id_re
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="CAR_MANAGERDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="CAR_MANAGERDataSet" msprop:Generator_DataSetName="CAR_MANAGERDataSet">
+  <xs:element name="Carga_Region_Marca" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="Carga_Region_Marca" msprop:Generator_DataSetName="Carga_Region_Marca">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="region" msprop:Generator_RowEvHandlerName="regionRowChangeEventHandler" msprop:Generator_RowDeletedName="regionRowDeleted" msprop:Generator_RowDeletingName="regionRowDeleting" msprop:Generator_RowEvArgName="regionRowChangeEvent" msprop:Generator_TablePropName="region" msprop:Generator_RowChangedName="regionRowChanged" msprop:Generator_RowChangingName="regionRowChanging" msprop:Generator_TableClassName="regionDataTable" msprop:Generator_RowClassName="regionRow" msprop:Generator_TableVarName="tableregion" msprop:Generator_UserTableName="region">

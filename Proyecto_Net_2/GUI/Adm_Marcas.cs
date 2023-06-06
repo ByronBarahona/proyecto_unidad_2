@@ -13,14 +13,14 @@ namespace Proyecto_Net_2.GUI
 
         private void Adm_Marcas_Load(object sender, System.EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet3.Comunas' Puede moverla o quitarla según sea necesario.
-            this.comunasTableAdapter1.Fill(this.cAR_MANAGERDataSet3.Comunas);
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet2.region' Puede moverla o quitarla según sea necesario.
-            this.regionTableAdapter1.Fill(this.cAR_MANAGERDataSet2.region);
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet1.Comunas' Puede moverla o quitarla según sea necesario.
-            this.comunasTableAdapter.Fill(this.cAR_MANAGERDataSet1.Comunas);
-            // TODO: esta línea de código carga datos en la tabla 'cAR_MANAGERDataSet.region' Puede moverla o quitarla según sea necesario.
-            this.regionTableAdapter.Fill(this.cAR_MANAGERDataSet.region);
+            // TODO: esta línea de código carga datos en la tabla 'carga_Comunas_Cnc.Comunas' Puede moverla o quitarla según sea necesario.
+            this.comunasTableAdapter1.Fill(this.carga_Comunas_Cnc.Comunas);
+            // TODO: esta línea de código carga datos en la tabla 'carga_Region_Cnc.region' Puede moverla o quitarla según sea necesario.
+            this.regionTableAdapter1.Fill(this.carga_Region_Cnc.region);
+            // TODO: esta línea de código carga datos en la tabla 'carga_Comunas_Marca.Comunas' Puede moverla o quitarla según sea necesario.
+            this.comunasTableAdapter.Fill(this.carga_Comunas_Marca.Comunas);
+            // TODO: esta línea de código carga datos en la tabla 'carga_Region_Marca.region' Puede moverla o quitarla según sea necesario.
+            this.regionTableAdapter.Fill(this.carga_Region_Marca.region);
 
         }
 
@@ -31,7 +31,7 @@ namespace Proyecto_Net_2.GUI
 
         private void Btn_Guardar_Click(object sender, System.EventArgs e)
         {
-            using (CAR_MANAGER_Entities cm = new CAR_MANAGER_Entities()) 
+            using (CAR_MANAGEREntities cm = new CAR_MANAGEREntities()) 
             {
                 MARCAS_vhs M_Vhs = new MARCAS_vhs()
                 {
@@ -58,7 +58,7 @@ namespace Proyecto_Net_2.GUI
                 cm.CNC.Add(cont);
                 cm.SaveChanges();
 
-                MessageBox.Show("Se han registrado con exito los datos");
+                MessageBox.Show("Se han registrado con éxito los datos");
             }
         }
 
@@ -87,7 +87,7 @@ namespace Proyecto_Net_2.GUI
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo se ingresan valores alfabeticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se ingresan valores alfabéticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -97,7 +97,7 @@ namespace Proyecto_Net_2.GUI
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo se ingresan valores alfabeticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se ingresan valores alfabéticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
@@ -108,7 +108,7 @@ namespace Proyecto_Net_2.GUI
         {
             if ((e.KeyChar >= 32 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                MessageBox.Show("Solo se ingresan valores alfabeticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Solo se ingresan valores alfabéticos", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 e.Handled = true;
                 return;
             }
